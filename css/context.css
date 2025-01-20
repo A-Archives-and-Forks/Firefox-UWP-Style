@@ -53,7 +53,7 @@
 		color: var(--uwp-global-front) !important;
 		font-style: normal !important;
 	}
-	menupopup menuitem, menupopup menu, button[role="menuitem"], .autocomplete-richlistitem, select > option, .all-tabs-item {
+	menupopup menuitem, menupopup menu, button[role="menuitem"], button[role="menuitemcheckbox"], .autocomplete-richlistitem, select > option, .all-tabs-item {
 		-moz-appearance: none !important;
 		color: var(--uwp-context-item-color) !important;
 		background-color: var(--uwp-context-item-background) !important;
@@ -71,7 +71,7 @@
 	.menuitem-iconic > .menu-iconic-left {
 		padding-top: 0px !important;
 	}
-	button[role="menuitem"] {
+	button:is([role="menuitem"], [role="menuitemcheckbox"]) {
 		background-position-x: 10px !important;
 		padding-left: 36px !important;
 	}
@@ -81,7 +81,7 @@
 	menupopup menuitem[disabled="true"], menupopup menuitem[disabled="true"] > .menu-text {
 		color: gray !important;
 	}
-	menupopup menuitem:hover, menupopup menu:hover, button[role="menuitem"]:hover, .autocomplete-richlistitem:hover, menupopup menuitem[_moz-menuactive], menupopup menu[_moz-menuactive], .all-tabs-item:hover {
+	menupopup menuitem:hover, menupopup menu:hover, button[role="menuitem"]:hover, button[role="menuitemcheckbox"]:hover, .autocomplete-richlistitem:hover, menupopup menuitem[_moz-menuactive], menupopup menu[_moz-menuactive], .all-tabs-item:hover {
 		background-color: var(--uwp-context-item-background-hover) !important;
 		border: none !important;
 	}
@@ -95,7 +95,7 @@
 			background-color: color-mix(in srgb, AccentColor 60%, black) !important;
 		}
 	}
-	menupopup menuitem:hover:active, menupopup menu:hover:active, button[role="menuitem"]:hover:active, .autocomplete-richlistitem:hover:active, menupopup menuitem[selected], .all-tabs-item:hover:active {
+	menupopup menuitem:hover:active, menupopup menu:hover:active, button[role="menuitem"]:hover:active, button[role="menuitemcheckbox"]:hover:active, .autocomplete-richlistitem:hover:active, menupopup menuitem[selected], .all-tabs-item:hover:active {
 		background-color: var(--uwp-context-item-background-active) !important;
 		border: none !important;
 	}
@@ -209,10 +209,12 @@
 		border-radius: var(--uwp-tags-control-radius) !important
 	}
 	@supports(backdrop-filter: blur(1px)) {
-		panel-list, .context-menu {
-			background-image: var(--uwp-acrylic-noise) !important;
-			background-color: var(--uwp-context-background-blur) !important;
-			backdrop-filter: var(--uwp-acrylic-backdrop) !important;
+		@media not (-moz-bool-pref: "uwp.sun-valley.mica") {
+			panel-list, .context-menu {
+				background-image: var(--uwp-acrylic-noise) !important;
+				background-color: var(--uwp-context-background-blur) !important;
+				backdrop-filter: var(--uwp-acrylic-backdrop) !important;
+			}
 		}
 	}
 	.arrow.top, .arrow.bottom {
