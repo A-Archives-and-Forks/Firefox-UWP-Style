@@ -226,11 +226,27 @@ button:has(> span[type="icon ghost"].button-background) {
 	border-width: 0px !important;
 	padding: 0px !important;
 	margin: 0px !important;
-	background: transparent !important;
-}
-button > span[type="icon ghost"].button-background {
-	border-width: 0px !important;
 	border-radius: 50% !important;
+	&:not(:hover, :active) {
+		background-color: transparent !important;
+	}
+}
+.tab-audio-button {
+	margin-inline-end: 0px !important;
+	margin: 0px 2px !important;
+	#tabbrowser-tabs:is([orient="vertical"][expanded], [orient="horizontal"]) &:not([pinned]):not([crashed]) {
+		background-repeat: no-repeat !important;
+		background-position: center !important;
+		-moz-context-properties: fill, fill-opacity, stroke !important;
+		fill: var(--button-icon-fill) !important;
+		stroke: var(--button-icon-stroke) !important;
+		&[soundplaying] {
+			background-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg") !important;
+		}
+		&[muted] {
+			background-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg") !important;
+		}
+	}
 }
 .tab-icon-stack .tab-icon-image {
 	opacity: 1 !important;
@@ -349,6 +365,32 @@ toolbarbutton.close-icon {
 }
 #identity-box[pageproxystate="valid"]  .identity-box-button {
 	background: transparent !important;
+}
+.tab-group-label-container {
+	margin: 0px 3px !important;
+	padding: 0px !important;
+	@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+		tab-group:not([collapsed]) > &::after {
+			inset: auto 0 1px !important;
+			height: 2px !important;
+			border-start-start-radius: 2px !important;
+			border-end-start-radius: 2px !important;
+			border-start-end-radius: 2px !important;
+			border-end-end-radius: 2px !important;
+		}
+	}
+}
+@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+	.tab-group-line {
+		margin: 0px !important;
+		position: absolute !important;
+		inset: auto 8px 1px !important;
+		height: 2px !important;
+		border-start-start-radius: 2px !important;
+		border-end-start-radius: 2px !important;
+		border-start-end-radius: 2px !important;
+		border-end-end-radius: 2px !important;
+	}
 }
 /* Findbar */
 .findbar-find-previous, .findbar-find-next {
@@ -868,7 +910,6 @@ notification {
 @media (-moz-bool-pref: "uwp.sun-valley") {
 	#fullscreen-warning  {
 		border: 1px solid var(--uwp-surface-stroke-flyout) !important;
-		margin: 0px 0px 2px 2px !important;
 	}
 }
 /*@supports(backdrop-filter: blur(1px)) {
@@ -986,7 +1027,7 @@ label .label-content .icon {
 	position: initial !important;
 }
 label[part="label"] {
-	display: flex !important;
+	display: flex;
 	gap: 0px !important;
 	align-items: start;
 }
