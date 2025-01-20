@@ -966,7 +966,7 @@ label .label-content .icon {
 	position: initial !important;
 }
 label[part="label"] {
-	display: flex !important;
+	display: flex;
 	gap: 0px !important;
 	align-items: start;
 }
