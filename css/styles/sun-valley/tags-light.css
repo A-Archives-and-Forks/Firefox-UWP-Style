@@ -23,12 +23,17 @@
 		--uwp-control-stroke-default: #0000000F;
 		--uwp-control-stroke-secondary: #00000029;
 
+		--uwp-control-stroke-accent-default: #FFFFFF14;
+		--uwp-control-stroke-accent-secondary: #00000066;
+		--uwp-control-stroke-accent-tertiary: #00000037;
+		--uwp-control-stroke-accent-disabled: #0000000F;
+
 		--uwp-control-stroke-default-border: 1px solid var(--uwp-control-stroke-default);
 
 		--uwp-control-strong-stroke-default: #00000072;
 		--uwp-control-strong-stroke-disabled: #00000037;
 
-		--uwp-control-elevation-border: 1px solid var(--uwp-control-stroke-secondary);
+		--uwp-control-elevation-border: 1px solid var(--uwp-control-stroke-default);
 		--uwp-input-elevation-border: 1px solid var(--uwp-control-stroke-default);
 
 		--uwp-control-strong-stroke-default-border: 1px solid var(--uwp-control-strong-stroke-default);
@@ -65,6 +70,8 @@
 
 		--uwp-system-caution: #FCE100;
 		--uwp-system-critical: #FF99A4;
+
+		--uwp-accent-tag: color-mix(in srgb, AccentColor 90%, #000000);
 
 		--uwp-tags-button: #CCCCCC;
 		--uwp-tags-button-hover: #7A7A7A;

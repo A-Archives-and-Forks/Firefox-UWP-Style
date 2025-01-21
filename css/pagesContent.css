@@ -652,6 +652,15 @@
 		background: transparent !important;
 		border: none !important;
 	}
+	moz-message-bar {
+		background-clip: padding-box !important;
+		background: var(--uwp-infobar-background) !important;
+		border: var(--uwp-infobar-border) !important;
+		border-radius: var(--uwp-tags-control-radius) !important;
+	}
+	img[data-l10n-id="moz-message-bar-icon-info"] {
+		color: var(--uwp-accent-tag) !important;
+	}
 	/* Icons */
 	/* Fixes FF62~ */
 	.navigation > .help-button {

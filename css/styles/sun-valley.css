@@ -262,6 +262,10 @@
 		--panel-separator-margin: var(--uwp-context-separator-margin) !important;
 		--panel-item-hover-bgcolor: var(--uwp-context-item-background-hover) !important;
 		--panel-item-active-bgcolor: var(--uwp-context-item-background-active) !important;
+		--button-text-color-ghost-hover: inherit !important;
+		--button-background-color-ghost-hover: var(--uwp-context-item-background-hover) !important;
+		--button-text-color-ghost-active: inherit !important;
+		--button-background-color-ghost-active: var(--uwp-context-item-background-active) !important;
 
 		--toolbar-bgcolor: var(--uwp-background-fill-base) !important;
 

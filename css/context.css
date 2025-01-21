@@ -85,6 +85,7 @@
 		background-color: var(--uwp-context-item-background-hover) !important;
 		border: none !important;
 	}
+	/*
 	@media (prefers-color-scheme: light) {
 		menupopup menu[open], menupopup menuitem[selected="true"], select > option:checked {
 			background-color: color-mix(in srgb, AccentColor 60%, white) !important;
@@ -95,6 +96,7 @@
 			background-color: color-mix(in srgb, AccentColor 60%, black) !important;
 		}
 	}
+	*/
 	menupopup menuitem:hover:active, menupopup menu:hover:active, button[role="menuitem"]:hover:active, button[role="menuitemcheckbox"]:hover:active, .autocomplete-richlistitem:hover:active, menupopup menuitem[selected], .all-tabs-item:hover:active {
 		background-color: var(--uwp-context-item-background-active) !important;
 		border: none !important;
