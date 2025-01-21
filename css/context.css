@@ -168,11 +168,35 @@
 		border-radius: var(--uwp-tags-control-radius) !important;
 		height: auto !important;
 		box-shadow: none !important;
+		@media (-moz-bool-pref: "uwp.sun-valley") {
+			@media (prefers-color-scheme: dark) {
+				& {
+					border-top-color: var(--uwp-control-stroke-secondary) !important;
+				}
+			}
+			@media (prefers-color-scheme: light) {
+				& {
+					border-bottom-color: var(--uwp-control-stroke-secondary) !important;
+				}
+			}
+		}
 	}
 	menulist:hover, select:hover { /* Finish this */
 		color: var(--uwp-combo-color-hover) !important;
 		background-color: var(--uwp-combo-background-hover) !important;
 		border: var(--uwp-combo-border-hover) !important;
+		@media (-moz-bool-pref: "uwp.sun-valley") {
+			@media (prefers-color-scheme: dark) {
+				& {
+					border-top-color: var(--uwp-control-stroke-secondary) !important;
+				}
+			}
+			@media (prefers-color-scheme: light) {
+				& {
+					border-bottom-color: var(--uwp-control-stroke-secondary) !important;
+				}
+			}
+		}
 	}
 	menulist[open="true"] {
 		color: var(--uwp-combo-color-active) !important;
