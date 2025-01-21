@@ -296,6 +296,7 @@
 		textarea,
 		input:not(#urlbar-input):not(.searchbar-textbox):not(.fake-editable):not([type="radio"]):not([type="checkbox"]):not([type="range"]),
 		.findbar-textbox {
+			padding: 5px 10px 6px 10px !important;
 			border-bottom-color: var(--uwp-input-border-bottom) !important;
 		}
 		textarea:hover,
@@ -306,7 +307,7 @@
 		textarea:focus,
 		input:not(#urlbar-input):not(.searchbar-textbox):not(.fake-editable):not([type="radio"]):not([type="checkbox"]):not([type="range"]):focus,
 		.findbar-textbox:focus {
-			padding: 5.5px 5.5px 4.5px 5.5px !important;
+			padding: 5px 10px 5px 10px !important;
 			border-bottom-width: 2px !important;
 			border-bottom-color: color-mix(in srgb, AccentColor 40%, white) !important;
 		}
