@@ -29,6 +29,7 @@
 	}
 	.dialogFrame {
 		margin: 0px !important;
+		background: transparent !important;
 	}
 	.dialogTitleBar {
 		background-color: var(--uwp-layer-fill-alt) !important;
@@ -47,12 +48,15 @@
 		border-radius: var(--uwp-tags-overlay-radius) !important;
 		overflow: hidden !important;
 	}
-	.dialog-content-box, .container[role="dialog"] > .content {
+	.dialog-content-box, .container[role="dialog"] > .content, vbox.box-inherit[part="content-box"]  {
 		padding: 24px !important;
 		margin-bottom: 24px !important;
 		border-bottom: 1px solid var(--uwp-dialog-separator) !important;
 		background-color: var(--uwp-layer-fill-alt) !important;
 		background-clip: padding-box !important;
+	}
+	.contentPane {
+		padding: 0px !important;
 	}
 	.dialog-button-box {
 		padding: 0px 24px 24px 24px !important;
@@ -63,8 +67,13 @@
 	}
 	.dialogClose {
 		margin: 0px !important;
-		width: 40px !important;
-		height: 25px !important;
+		width: 28px !important;
+		height: 28px !important;
+		padding: 0px !important;
+		&:not(:hover, :active) {
+			background: transparent !important;
+			border-color: transparent !important;
+		}
 	}
 	.groove {
 		border: none !important;
@@ -660,6 +669,23 @@
 	}
 	img[data-l10n-id="moz-message-bar-icon-info"] {
 		color: var(--uwp-accent-tag) !important;
+	}
+	.web-appearance-choice {
+		color: var(--uwp-foreground) !important;
+		border: var(--uwp-expander-border) !important;
+		border-radius: var(--uwp-tags-control-radius) !important;
+		background-clip: padding-box !important;
+		background-color: var(--uwp-dialog-background) !important;
+	}
+	.web-appearance-choice-image-container {
+		background-color: var(--uwp-layer-fill-alt) !important;
+	}
+	.web-appearance-choice-footer {
+		background-color: transparent !important;
+
+		& span {
+			line-height: 24px !important;
+		}
 	}
 	/* Icons */
 	/* Fixes FF62~ */
