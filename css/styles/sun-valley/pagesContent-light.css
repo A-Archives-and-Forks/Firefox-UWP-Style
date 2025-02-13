@@ -1,5 +1,5 @@
 /**/
-@media (-moz-bool-pref: "uwp.sun-valley") {
+@media -moz-pref("uwp.sun-valley") {
 @media (prefers-color-scheme: light) {
 @-moz-document url-prefix("chrome://"), regexp("about:(?!blank).*") {
 
@@ -67,7 +67,7 @@
 		--customize-menu-background: #EFEFEF !important;
 	}
 
-	@media (-moz-bool-pref: "browser.tabs.allow_transparent_browser") {
+	@media -moz-pref("browser.tabs.allow_transparent_browser") {
 		body {
 			--newtab-background-color: transparent !important;
 		}

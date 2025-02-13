@@ -1,5 +1,5 @@
 /**/
-@media (-moz-bool-pref: "uwp.sun-valley") {
+@media -moz-pref("uwp.sun-valley") {
 @media (prefers-color-scheme: light) {
 	:root {
 		--uwp-global-front: black;

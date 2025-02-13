@@ -8,7 +8,7 @@
 		color: var(--uwp-foreground) !important;
 		padding: 0px !important;
 	}
-	@media (-moz-bool-pref: "uwp.sun-valley.mica") {
+	@media -moz-pref("uwp.sun-valley.mica") {
 		window:not([type="child"]) {
 			/*appearance: -moz-win-borderless-glass !important;*/
 			background: transparent !important;
@@ -62,12 +62,12 @@
 	.dialog-button-box {
 		padding: 0px 16px 16px 16px !important;
 	}
-	@media not (-moz-bool-pref: "uwp.sun-valley") {
+	@media not -moz-pref("uwp.sun-valley") {
 		.dialog-content-box {
 			padding-bottom: 0px !important;
 		}
 	}
-	@media (-moz-bool-pref: "uwp.sun-valley") {
+	@media -moz-pref("uwp.sun-valley") {
 		.dialog-content-box, vbox[part="content-box"].box-inherit {
 			margin-bottom: 24px !important;
 		}
@@ -91,7 +91,7 @@
 	#label-box[native] {
 		outline: none !important;
 	}
-	@media not (-moz-bool-pref: "uwp.sun-valley") {
+	@media not -moz-pref("uwp.sun-valley") {
 		.dialogBox {
 			border: 1px solid AccentColor !important;
 		}

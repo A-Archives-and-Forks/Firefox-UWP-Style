@@ -78,7 +78,7 @@
 	.groove {
 		border: none !important;
 	}
-	@media not (-moz-bool-pref: "uwp.sun-valley") {
+	@media not -moz-pref("uwp.sun-valley") {
 		.dialogBox {
 			border: 1px solid AccentColor !important;
 		}
@@ -469,7 +469,7 @@
 		border-top-left-radius: var(--uwp-tags-overlay-radius) !important;
 		border-top-right-radius: var(--uwp-tags-overlay-radius) !important;
 	}
-	@media not (-moz-bool-pref: "uwp.sun-valley") {
+	@media not -moz-pref("uwp.sun-valley") {
 		.edit-topsites-wrapper .modal {
 			border: 1px solid AccentColor !important;
 		}
@@ -480,7 +480,7 @@
 			border: 1px solid AccentColor !important;
 		}
 	}
-	@media (-moz-bool-pref: "uwp.sun-valley") {
+	@media -moz-pref("uwp.sun-valley") {
 		@supports(backdrop-filter: blur(1px)) {
 			.customize-menu.customize-animate-enter-done, .customize-menu.customize-animate-enter-active, .customize-menu.customize-animate-enter, .customize-menu.customize-animate-exit {
 				background-image: var(--uwp-acrylic-noise) !important;
@@ -535,7 +535,7 @@
 
 @-moz-document url-prefix("about:preferences") {
 
-	@media not (-moz-bool-pref: "uwp.sun-valley") {
+	@media not -moz-pref("uwp.sun-valley") {
 		:root {
 			--uwp-expander-background: var(--uwp-tags-richlistitem-hover) !important;
 		}
@@ -646,7 +646,7 @@
 		background-color: transparent !important;
 		overflow-y: hidden !important;
 	}
-	@media not (-moz-bool-pref: "uwp.sun-valley") {
+	@media not -moz-pref("uwp.sun-valley") {
 		.navigation {
 			background-color: var(--uwp-pages-sidepanel) !important;
 		}
@@ -758,7 +758,7 @@
 	#sidebar {
 		background-color: transparent !important;
 	}
-	@media not (-moz-bool-pref: "uwp.sun-valley") {
+	@media not -moz-pref("uwp.sun-valley") {
 		#sidebar {
 			background-color: var(--uwp-pages-sidepanel) !important;
 		}
@@ -857,7 +857,7 @@
 	.addon-name-container {
 		margin: 0px !important;
 	}
-	@media not (-moz-bool-pref: "uwp.sun-valley") {
+	@media not -moz-pref("uwp.sun-valley") {
 		.card-heading-icon {
 			fill: AccentColorText !important;
 			background-color: AccentColor !important;

@@ -168,7 +168,7 @@
 		border-radius: var(--uwp-tags-control-radius) !important;
 		height: auto !important;
 		box-shadow: none !important;
-		@media (-moz-bool-pref: "uwp.sun-valley") {
+		@media -moz-pref("uwp.sun-valley") {
 			@media (prefers-color-scheme: dark) {
 				& {
 					border-top-color: var(--uwp-control-stroke-secondary) !important;
@@ -185,7 +185,7 @@
 		color: var(--uwp-combo-color-hover) !important;
 		background-color: var(--uwp-combo-background-hover) !important;
 		border: var(--uwp-combo-border-hover) !important;
-		@media (-moz-bool-pref: "uwp.sun-valley") {
+		@media -moz-pref("uwp.sun-valley") {
 			@media (prefers-color-scheme: dark) {
 				& {
 					border-top-color: var(--uwp-control-stroke-secondary) !important;
@@ -235,7 +235,7 @@
 		border-radius: var(--uwp-tags-control-radius) !important
 	}
 	@supports(backdrop-filter: blur(1px)) {
-		@media not (-moz-bool-pref: "uwp.sun-valley.mica") {
+		@media not -moz-pref("uwp.sun-valley.mica") {
 			panel-list, .context-menu {
 				background-image: var(--uwp-acrylic-noise) !important;
 				background-color: var(--uwp-context-background-blur) !important;

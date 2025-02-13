@@ -100,7 +100,7 @@
 .urlbarView-row[label]::before {
 	display: none !important;
 }
-@media (-moz-bool-pref: "uwp.sun-valley.colored-tabs") {
+@media -moz-pref("uwp.sun-valley.colored-tabs") {
 	.tabbrowser-tab > .tab-stack {
 		--tmp-tab-line: color-mix(in srgb, var(--identity-tab-color) 50%, transparent);
 		--lwt-tab-line-color: var(--tmp-tab-line, color-mix(in srgb, AccentColor 50%, transparent)) !important;
@@ -113,7 +113,7 @@
 		outline-offset: -1px !important;
 	}
 }
-@media (-moz-bool-pref: "uwp.sun-valley.round-tabs") {
+@media -moz-pref("uwp.sun-valley.round-tabs") {
 	.tabbrowser-tab > .tab-stack > .tab-background {
 		background-color: transparent !important;
 		background-clip: padding-box !important;
@@ -125,7 +125,7 @@
 		opacity: 1 !important;
 		overflow: hidden !important;
 		transition: background-color 83ms !important;
-		@media (-moz-bool-pref: "uwp.sun-valley") {
+		@media -moz-pref("uwp.sun-valley") {
 			@media (prefers-color-scheme: dark) {
 				& {
 					border-top-color: var(--uwp-control-stroke-secondary) !important;
@@ -144,7 +144,7 @@
 	.tabbrowser-tab:hover > .tab-stack > .tab-background {
 		background-color: var(--uwp-button-background-hover) !important;
 		border: var(--uwp-button-border-hover) !important;
-		@media (-moz-bool-pref: "uwp.sun-valley") {
+		@media -moz-pref("uwp.sun-valley") {
 			@media (prefers-color-scheme: dark) {
 				& {
 					border-top-color: var(--uwp-control-stroke-secondary) !important;
@@ -170,7 +170,7 @@
 		border-radius: var(--uwp-tags-overlay-radius) !important;
 		margin: 0px 2px !important;
 		transition: background-color 83ms !important;
-		@media (-moz-bool-pref: "uwp.sun-valley") {
+		@media -moz-pref("uwp.sun-valley") {
 			@media (prefers-color-scheme: dark) {
 				& {
 					border-top-color: var(--uwp-control-stroke-secondary) !important;
@@ -189,7 +189,7 @@
 	.toolbar-items .toolbarbutton-1:hover, #tabbrowser-tabs[orient="vertical"] .toolbarbutton-1:hover {
 		background-color: var(--uwp-button-background-hover) !important;
 		border: var(--uwp-button-border-hover) !important;
-		@media (-moz-bool-pref: "uwp.sun-valley") {
+		@media -moz-pref("uwp.sun-valley") {
 			@media (prefers-color-scheme: dark) {
 				& {
 					border-top-color: var(--uwp-control-stroke-secondary) !important;
@@ -213,7 +213,7 @@
 		margin: 0px !important;
 	}
 }
-@media not (-moz-bool-pref: "uwp.sun-valley.round-tabs") {
+@media not -moz-pref("uwp.sun-valley.round-tabs") {
 	.tabbrowser-tab > .tab-stack > .tab-background {
 		border-top: none !important;
 		margin: 0px !important;
@@ -372,7 +372,7 @@ toolbarbutton.close-icon {
 		background-color: var(--uwp-background) !important;
 	}
 }
-@media (-moz-bool-pref: "privacy.resistFingerprinting.letterboxing") {
+@media -moz-pref("privacy.resistFingerprinting.letterboxing") {
 	#navigator-toolbox {
 		margin-bottom: var(--uwp-navbar-letterbox) !important;
 	}
@@ -381,31 +381,31 @@ toolbarbutton.close-icon {
 	}
 }
 @media (-moz-platform: windows) {
-	@media (-moz-bool-pref: "uwp.sun-valley.round-tabs") {
-		@media (-moz-bool-pref: "uwp.sun-valley.mica") {
+	@media -moz-pref("uwp.sun-valley.round-tabs") {
+		@media -moz-pref("uwp.sun-valley.mica") {
 			:root[sizemode="fullscreen"] #navigator-toolbox-background {
 				background: var(--uwp-background) !important;
 			}
 		}
-		@media not (-moz-bool-pref: "uwp.sun-valley.mica") {
+		@media not -moz-pref("uwp.sun-valley.mica") {
 			#navigator-toolbox-background {
 				background: var(--uwp-background) !important;
 			}
 		}
 	}
 }
-@media not (-moz-bool-pref: "browser.tabs.allow_transparent_browser") {
+@media not -moz-pref("browser.tabs.allow_transparent_browser") {
 	#browser vbox#appcontent tabbrowser, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html {
 		background: var(--uwp-browser) !important;
 	}
 }
-@media (-moz-bool-pref: "browser.tabs.allow_transparent_browser") {
+@media -moz-pref("browser.tabs.allow_transparent_browser") {
 	#browser vbox#appcontent tabbrowser, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html {
 		background: transparent !important;
 	}
 }
 /*
-@media (-moz-bool-pref: "uwp.sun-valley.mica") {
+@media -moz-pref("uwp.sun-valley.mica") {
 	#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html {
 		background: transparent !important;
 	}
@@ -420,7 +420,7 @@ toolbarbutton.close-icon {
 .tab-group-label-container {
 	margin: 0px 3px !important;
 	padding: 0px !important;
-	@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+	@media not -moz-pref("sidebar.verticalTabs") {
 		tab-group:not([collapsed]) > &::after {
 			inset: auto 0 1px !important;
 			height: 2px !important;
@@ -431,7 +431,7 @@ toolbarbutton.close-icon {
 		}
 	}
 }
-@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+@media not -moz-pref("sidebar.verticalTabs") {
 	.tab-group-line {
 		margin: 0px !important;
 		position: absolute !important;
@@ -666,7 +666,7 @@ panel[position*="bottomleft"] {
 #PopupSearchAutoComplete {
 	-moz-window-shadow: none !important;
 }
-@media not (-moz-bool-pref: "uwp.sun-valley") {
+@media not -moz-pref("uwp.sun-valley") {
 	.urlbar-input-container, #searchbar {
 		border: none !important;
 		background-color: var(--uwp-urlbar) !important;
@@ -706,7 +706,7 @@ panel[position*="bottomleft"] {
 		border-radius: 0px !important;
 	}
 }
-@media (-moz-bool-pref: "uwp.sun-valley") {
+@media -moz-pref("uwp.sun-valley") {
 	#urlbar[breakout][breakout-extend] #urlbar-background {
 		display: block !important;
 		background: var(--uwp-autocomplete-list) !important;
@@ -911,7 +911,7 @@ body[lwt-sidebar] {
 	box-shadow: -10px 10px 10px 14px rgba(0, 0, 0, .5) !important;
 	clip-path: inset(-20px -20px 0px 0px) !important;
 }
-@media (-moz-bool-pref: "uwp.sun-valley") {
+@media -moz-pref("uwp.sun-valley") {
 	#statuspanel-label {
 		border: 1px solid var(--uwp-surface-stroke-flyout) !important;
 		border-radius: var(--uwp-tags-overlay-radius) !important;
@@ -961,7 +961,7 @@ notification {
 .pointerlockfswarning[ontop] {
 	transform: translate(-50%, 10px) !important;
 }
-@media (-moz-bool-pref: "uwp.sun-valley") {
+@media -moz-pref("uwp.sun-valley") {
 	#fullscreen-warning  {
 		border: 1px solid var(--uwp-surface-stroke-flyout) !important;
 	}
@@ -1113,7 +1113,7 @@ sidebar-tab-row {
 	background: transparent !important;
 }
 
-@media (-moz-bool-pref: "sidebar.revamp") {
+@media -moz-pref("sidebar.revamp") {
 	#appcontent {
 		border-top-left-radius: var(--uwp-tags-overlay-radius) !important;
 		background-color: var(--uwp-nav-content-background) !important;
@@ -1180,7 +1180,7 @@ sidebar-main {
 	--uwp-navbar-letterbox-bookmarks: 0px;
 	--inactive-titlebar-opacity: 1 !important;
 }
-@media (-moz-bool-pref: "uwp.sun-valley.round-tabs") {
+@media -moz-pref("uwp.sun-valley.round-tabs") {
 	:root #TabsToolbar {
 		--toolbarbutton-inner-padding: 6px !important;
 	}
@@ -1197,7 +1197,7 @@ sidebar-main {
 	--uwp-navbar-letterbox-bookmarks: 0px;
 	--toolbarbutton-inner-padding: 12px !important;
 }
-@media (-moz-bool-pref: "uwp.sun-valley.round-tabs") {
+@media -moz-pref("uwp.sun-valley.round-tabs") {
 	:root[uidensity="touch"] #TabsToolbar {
 		--toolbarbutton-inner-padding: 12px !important;
 	}
@@ -1210,13 +1210,13 @@ sidebar-main {
 }
 
 
-@media (-moz-bool-pref: "uwp.sun-valley.mica") {
+@media -moz-pref("uwp.sun-valley.mica") {
 	#main-window:not([sizemode="fullscreen"])  {
 		background: transparent !important;
 	}
 }
 
-@media not (-moz-bool-pref: "uwp.sun-valley.searchmode-switcher") {
+@media not -moz-pref("uwp.sun-valley.searchmode-switcher") {
 	#urlbar-searchmode-switcher {
 		display: none !important;
 	}
