@@ -1,13 +1,18 @@
 @-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!(blank|devtools)).*") {
 
-	menupopup {
-		-moz-appearance: none !important;
+	menupopup, panel:not(.autoscroller) {
+		appearance: menupopup !important;
 		background: transparent !important;
-		-moz-window-shadow: none !important;
 		border: none !important;
-		padding: var(--uwp-popup-padding) !important;
-		margin: var(--uwp-popup-margin) !important;
 		border-radius: 0px !important;
+		@media not -moz-pref("widget.windows.mica.popups") {
+			& {
+				appearance: none !important;
+				-moz-window-shadow: none !important;
+				padding: var(--uwp-popup-padding) !important;
+				margin: var(--uwp-popup-margin) !important;
+			}
+		}
 	}
 	menupopup.in-menulist {
 		margin: 0px !important;
@@ -17,13 +22,18 @@
 	.menupopup-arrowscrollbox, panel-list, .context-menu, ul[role="menu"].menu {
 		-moz-appearance: none !important;
 		padding: var(--uwp-context-margin) !important;
-		background-color: var(--uwp-context-background) !important;
+		background-color: var(--uwp-context-background-blur) !important;
 		background-clip: padding-box !important;
-		background-image: none !important;
+		background-image: var(--uwp-acrylic-noise) !important;
 		border: 1px solid var(--uwp-context-border) !important;
 		border-radius: var(--uwp-tags-overlay-radius) !important;
 		box-shadow: var(--uwp-shadow-context) !important;
 		margin: 0px !important;
+		@media not -moz-pref("widget.windows.mica.popups") {
+			& {
+				background-color: var(--uwp-context-background) !important;
+			}
+		}
 	}
 	.scrollbox-clip * {
 		scrollbar-width: var(--uwp-context-scrollbar-width) !important;

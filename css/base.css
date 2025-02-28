@@ -491,13 +491,19 @@ findbar[hidden] {
 		border: 1px solid var(--uwp-context-border) !important;
 	}
 	slot[part="content"]:only-child {
-		margin: var(--uwp-popup-padding) !important;
+		margin: 0 !important;
 		border: 1px solid var(--uwp-context-border) !important;
 		border-radius: var(--uwp-tags-overlay-radius) !important;
-		background: var(--uwp-context-background) !important;
+		background-color: var(--uwp-context-background-blur) !important;
 		background-clip: padding-box !important;
-		box-shadow: var(--uwp-shadow-context) !important;
 		overflow: clip !important;
+		@media not -moz-pref("widget.windows.mica.popups") {
+			& {
+				margin: var(--uwp-popup-padding) !important;
+				background: var(--uwp-context-background) !important;
+				box-shadow: var(--uwp-shadow-context) !important;
+			}
+		}
 	}
 }
 
@@ -512,7 +518,7 @@ findbar[hidden] {
 	border-radius: 50%;
 	background: no-repeat center var(--autoscroll-background-image) rgba(249,249,250,.8);
 	border: solid rgba(0,0,0,.4) 1.5px;
-	translate: -11px -33px;
+	translate: -10px -12px;
 	box-shadow: 0 0 4px rgba(0,0,0,.2);
 }
 
@@ -535,18 +541,20 @@ panel .text-link {
 #PopupAutoComplete {
 	margin: var(--uwp-popup-margin) !important;
 }
-panel[position*="bottomcenter"] {
-	margin-top: -2px !important;
-}
-panel[position*="topleft"]:not([position~="bottomleft"]) {
-	margin-left: -22px !important;
-}
-panel[position*="topright"] {
-	margin-right: -25px !important;
-}
-panel[position*="bottomleft"] {
-	margin-left: -11px !important;
-	margin-bottom: -18px !important;
+@media not -moz-pref("widget.windows.mica.popups") {
+	panel[position*="bottomcenter"] {
+		margin-top: -2px !important;
+	}
+	panel[position*="topleft"]:not([position~="bottomleft"]) {
+		margin-left: -22px !important;
+	}
+	panel[position*="topright"] {
+		margin-right: -25px !important;
+	}
+	panel[position*="bottomleft"] {
+		margin-left: -11px !important;
+		margin-bottom: -18px !important;
+	}
 }
 #editBookmarkPanelFavicon {
 	display: none !important;
