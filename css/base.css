@@ -505,6 +505,20 @@ findbar[hidden] {
 			}
 		}
 	}
+	.animatable-menupopup, panel[type="arrow"] {
+		&:not([animate="false"]) {
+			transition-duration: 0s !important;
+		}
+		@media not (-moz-platform: macos) {
+			& {
+				opacity: 1 !important;
+				transform: none !important;
+			}
+			&[side="bottom"] {
+				transform: none !important;
+			}
+		}
+	}
 }
 
 .autoscroller {

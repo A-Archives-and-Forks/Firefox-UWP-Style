@@ -5,6 +5,8 @@
 		background: transparent !important;
 		border: none !important;
 		border-radius: 0px !important;
+		margin: 0px !important;
+		--panel-shadow-margin: 0px !important;
 		@media not -moz-pref("widget.windows.mica.popups") {
 			& {
 				appearance: none !important;
