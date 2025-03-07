@@ -49,6 +49,7 @@
 }
 .titlebar-spacer[type="post-tabs"] {
 	width: 50px !important;
+	display: flex !important;
 }
 /* Window */
 /* Temporal fix for top border */
@@ -269,7 +270,7 @@
 .tab-audio-button {
 	height: 26px !important;
 }
-button:has(> span[type="icon ghost"].button-background) {
+button:has(> span[type="icon ghost"].button-background:not(.labelled)) {
 	border: none !important;
 	border-width: 0px !important;
 	padding: 0px !important;
@@ -903,6 +904,22 @@ panel .text-link {
 /* Sidebar */
 #sidebar-box {
 	background-color: transparent !important;
+	@media -moz-pref("sidebar.revamp") {
+		& {
+			padding-block-end: 0px !important;
+			padding-inline-end: 0px !important;
+		}
+	}
+}
+#sidebar {
+	@media -moz-pref("sidebar.revamp") {
+		& {
+			box-shadow: none !important;
+			border-radius: 0px !important;
+			border: none !important;
+			background: transparent !important;
+		}
+	}
 }
 body[lwt-sidebar] {
 	background-color: transparent !important;
@@ -1049,32 +1066,33 @@ notification {
 
 /* Sidebar */
 /* Why the hell is this a shadow root */
-.wrapper {
+.wrapper:has(> slot[name="tabstrip"]) {
 	border: none !important;
 	background: transparent !important;
-	padding: 8px 3px !important;
+	padding: 8px 0px !important;
 	border-inline-end: none !important;
 	gap: 4px !important;
 	min-width: 0px !important;
+	margin-right: 1px !important;
 }
 .wrapper > * {
 	padding-inline-end: 0px !important;
 }
 .wrapper > .tools-and-extensions {
-	gap: 4px !important;
+	gap: 1px !important;
 }
-.wrapper > .tools-and-extensions > moz-button {
+button:has(> span[type="icon ghost"].button-background.labelled) {
+	border-radius: var(--uwp-tags-overlay-radius) !important;
+	height: 32px !important;
+	&:not(:hover, :active) {
+		border-color: transparent !important;
+		background-color: transparent !important;
+	}
 }
-/* How I'm supposed to unfuck this thing if the damn button is inside a shadow root the hell */
-moz-button button {
-
-}
-#sidebar-box {
-
-}
-
-.sidebar-panel {
-	padding: 8px !important;
+@-moz-document url("chrome://browser/content/sidebar/sidebar-customize.html") {
+	.sidebar-panel {
+		padding: 8px !important;
+	}
 }
 /* Move this into another css (?) */
 .search-container > .search-icon {
@@ -1136,7 +1154,7 @@ sidebar-tab-row {
 }
 
 @media -moz-pref("sidebar.revamp") {
-	#appcontent {
+	#tabbrowser-tabbox {
 		border-top-left-radius: var(--uwp-tags-overlay-radius) !important;
 		background-color: var(--uwp-nav-content-background) !important;
 		background-clip: padding-box !important;
@@ -1161,17 +1179,36 @@ sidebar-tab-row {
 #vertical-tabs-newtab-button {
 	appearance: none !important;
 }
-sidebar-main[expanded] > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
-	min-width: 100% !important;
+#sidebar-main {
+
 }
 sidebar-main > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
 	min-height: 36px !important;
+	& > .tab-stack > .tab-content {
+		padding-left: 17px !important;
+		padding-right: 9px !important;
+		--tab-close-button-padding: 5px !important;
+	}
+	&:not([expanded]) {
+		& .tab-background {
+			width: auto !important;
+		}
+  }
 }
-sidebar-main[expanded] {
-      min-width: 280px !important;
+.browser-toolbox-background {
+	background: transparent !important;
 }
-sidebar-main {
-      min-width: 46px !important;
+@layer input-common {
+	.label-wrapper {
+		padding-inline-start: 0px !important;
+	}
+}
+fieldset {
+	& > #inputs {
+		background-color: transparent !important;
+		border: none !important;
+		border-radius: 0px !important;
+	}
 }
 
 :root {
