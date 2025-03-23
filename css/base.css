@@ -49,7 +49,9 @@
 }
 .titlebar-spacer[type="post-tabs"] {
 	width: 50px !important;
-	display: flex !important;
+	@media -moz-pref("sidebar.verticalTabs") {
+		display: flex !important;
+	}
 }
 /* Window */
 /* Temporal fix for top border */
@@ -498,6 +500,7 @@ findbar[hidden] {
 		background-color: var(--uwp-context-background-blur) !important;
 		background-clip: padding-box !important;
 		overflow: clip !important;
+		box-shadow: none !important;
 		@media not -moz-pref("widget.windows.mica.popups") {
 			& {
 				margin: var(--uwp-popup-padding) !important;
@@ -918,6 +921,7 @@ panel .text-link {
 			border-radius: 0px !important;
 			border: none !important;
 			background: transparent !important;
+			outline: none !important;
 		}
 	}
 }
@@ -1069,7 +1073,7 @@ notification {
 .wrapper:has(> slot[name="tabstrip"]) {
 	border: none !important;
 	background: transparent !important;
-	padding: 8px 0px !important;
+	padding: 0px 0px 8px 0px !important;
 	border-inline-end: none !important;
 	gap: 4px !important;
 	min-width: 0px !important;
@@ -1081,7 +1085,7 @@ notification {
 .wrapper > .tools-and-extensions {
 	gap: 1px !important;
 }
-button:has(> span[type="icon ghost"].button-background.labelled) {
+button:has(> span:is([type="icon ghost"], [type="icon"]).button-background.labelled) {
 	border-radius: var(--uwp-tags-overlay-radius) !important;
 	height: 32px !important;
 	&:not(:hover, :active) {
@@ -1170,30 +1174,29 @@ sidebar-tab-row {
 }
 #tabbrowser-tabs[orient="vertical"] {
 	gap: 0px !important;
-	& #newtab-button-container {
-		font-size: 12px !important;
-		padding-top: 0px !important;
-		margin-inline-end: 0px !important;
+	& #tabs-newtab-button {
+		min-height: 36px !important;
+		margin-top: 2px !important;
+		padding-left: 16px !important;
+		padding-right: 8px !important;
+	}
+	& .tabbrowser-tab {
+		min-height: 36px !important;
+		margin: 2px 0px !important;
+		& > .tab-stack > .tab-content {
+			padding-left: 17px !important;
+			padding-right: 9px !important;
+			--tab-close-button-padding: 5px !important;
+		}
+		&:not([expanded]) {
+			& .tab-background {
+				width: auto !important;
+			}
+		}
 	}
 }
 #vertical-tabs-newtab-button {
 	appearance: none !important;
-}
-#sidebar-main {
-
-}
-sidebar-main > #vertical-tabs > #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
-	min-height: 36px !important;
-	& > .tab-stack > .tab-content {
-		padding-left: 17px !important;
-		padding-right: 9px !important;
-		--tab-close-button-padding: 5px !important;
-	}
-	&:not([expanded]) {
-		& .tab-background {
-			width: auto !important;
-		}
-  }
 }
 .browser-toolbox-background {
 	background: transparent !important;
@@ -1208,6 +1211,14 @@ fieldset {
 		background-color: transparent !important;
 		border: none !important;
 		border-radius: 0px !important;
+	}
+}
+
+/* Hackery */
+@layer input-common {
+	#input {
+		margin-inline: 0px !important;
+		margin-right: 8px !important;
 	}
 }
 

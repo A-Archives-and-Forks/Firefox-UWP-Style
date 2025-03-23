@@ -21,7 +21,7 @@
 		padding: 0px !important;
 		border-radius: 0px !important;
 	}
-	.menupopup-arrowscrollbox, panel-list, .context-menu, ul[role="menu"].menu {
+	.menupopup-arrowscrollbox, .context-menu, ul[role="menu"].menu {
 		-moz-appearance: none !important;
 		padding: var(--uwp-context-margin) !important;
 		background-color: var(--uwp-context-background-blur) !important;
@@ -29,13 +29,25 @@
 		background-image: var(--uwp-acrylic-noise) !important;
 		border: 1px solid var(--uwp-context-border) !important;
 		border-radius: var(--uwp-tags-overlay-radius) !important;
-		box-shadow: var(--uwp-shadow-context) !important;
+		box-shadow: none !important;
 		margin: 0px !important;
 		@media not -moz-pref("widget.windows.mica.popups") {
 			& {
 				background-color: var(--uwp-context-background) !important;
+				box-shadow: var(--uwp-shadow-context) !important;
 			}
 		}
+	}
+	panel-list {
+		-moz-appearance: none !important;
+		padding: var(--uwp-context-margin) !important;
+		background-color: var(--uwp-context-background) !important;
+		background-clip: padding-box !important;
+		background-image: var(--uwp-acrylic-noise) !important;
+		border: 1px solid var(--uwp-context-border) !important;
+		border-radius: var(--uwp-tags-overlay-radius) !important;
+		box-shadow: var(--uwp-shadow-context) !important;
+		margin: 0px !important;
 	}
 	.scrollbox-clip * {
 		scrollbar-width: var(--uwp-context-scrollbar-width) !important;
@@ -238,13 +250,19 @@
 	}
 	tooltip { /* Also update the js script */
 		-moz-window-shadow: cliprounded !important;
-		-moz-appearance: none !important;
+		appearance: menupopup !important;
 		color: var(--uwp-global-front) !important;
-		background-color: var(--uwp-context-tooltip) !important;
+		background-color: var(--uwp-context-background-blur) !important;
 		background-clip: padding-box !important;
 		border: 1px solid var(--uwp-context-tooltip-border) !important;
 		padding: 6px !important;
-		border-radius: var(--uwp-tags-control-radius) !important
+		border-radius: var(--uwp-tags-control-radius) !important;
+		@media not -moz-pref("widget.windows.mica.popups") {
+			& {
+				background-color: var(--uwp-context-tooltip) !important;
+				appearance: none !important;
+			}
+		}
 	}
 	@supports(backdrop-filter: blur(1px)) {
 		@media not -moz-pref("uwp.sun-valley.mica") {
