@@ -7,8 +7,8 @@ A theme that follows UWP styling.
 Select the appropriate file:
 
 - [Firefox Nightly](https://github.com/Guerra24/Firefox-UWP-Style/archive/refs/heads/nightly.zip)
-- [Firefox 135](https://github.com/Guerra24/Firefox-UWP-Style/archive/refs/heads/firefox-135.zip)
-- [Firefox 133-134](https://github.com/Guerra24/Firefox-UWP-Style/archive/refs/heads/firefox-133.zip)
+- [Firefox 137](https://github.com/Guerra24/Firefox-UWP-Style/archive/refs/heads/firefox-137.zip)
+- [Firefox 135-136](https://github.com/Guerra24/Firefox-UWP-Style/archive/refs/heads/firefox-135.zip)
 
 Copy the content inside the folder where userChrome.css file is located into your *chrome* folder.
 
@@ -37,15 +37,17 @@ Create boolean `uwp.sun-valley.colored-tabs` pref to enable colored tabs. It use
 
 ## Customize
 
-Toggle `layout.css.backdrop-filter.enabled` pref to enable *acrylic blur* in some menus.
-
 Toggle `widget.non-native-theme.use-theme-accent` pref to enable accent color in all *about:\** pages.
+
+Acrylic and Mica only work with the *Sun Valley* style.
+
+### Acrylic
+
+Toggle `widget.windows.mica.popups` pref to enable.
 
 ### Mica
 
-**Only supported on Firefox 133 and newer**
-
-Requires [MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone) and only works with *Sun Valley* style
+Requires [MicaForEveryone](https://github.com/MicaForEveryone/MicaForEveryone).
 
 In MicaForEveryone create a process rule and select `firefox` then set the backdrop type to your preferred one.
 
