@@ -216,6 +216,7 @@
 		background-color: var(--uwp-nav-item-background) !important;
 		border-radius: var(--uwp-tags-control-radius) !important;
 		margin: var(--uwp-nav-item-margin) !important;
+		transition: none !important;
 	}
 	#categories > .category:not(richlistitem) > .category-name {
 		padding-left: calc(44px - var(--uwp-nav-item-selector-width)) !important;
@@ -249,6 +250,9 @@
 	}
 	#categories > .category:is(div) > .category-name {
 		margin-left: 40px !important;
+	}
+	#categories > .category:is(div).category-no-icon > .category-name {
+		margin-left: 8px !important;
 	}
 	#categories > .category::before {
 		content: "";
@@ -312,6 +316,13 @@
 		border: var(--uwp-nav-content-border) !important;
 		border-right-width: 0px !important;
 		border-bottom-width: 0px !important;
+		box-sizing: border-box !important;
+		display: flex !important;
+		flex-direction: column !important;
+	}
+	.pane-container {
+		height: 100% !important;
+		width: 100% !important;
 	}
 	/* Font Fixes */
 	textbox {
@@ -327,13 +338,17 @@
 /* Move this in the future */
 @-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!blank).*") {
 	@media (max-width: 830px) {
+		#full {
+			--sidebar-width: 48px !important;
+		}
 		#categories {
-			width: 40px !important;
+			width: 48px !important;
 		}
 		#categories > .category {
 			padding-inline-start: 0px !important;
 			margin-inline-end: 0px !important;
 			padding-right: 2px !important;
+			width: 40px !important;
 		}
 		.main-content {
 			padding-left: 28px !important;
@@ -342,6 +357,9 @@
 		sidebar-footer-button > .text-link {
 			margin-inline-start: 0px !important;
 			padding-left: 0px !important;
+		}
+		.navigation, #sidebar {
+			width: 48px !important;
 		}
 	}
 }
@@ -635,7 +653,24 @@
 		align-items: center !important;
 	}
 	.sticky-container {
-		background-color: var(--uwp-sticky-container-hack) !important;
+		position: initial !important;
+		background-color: transparent !important;
+	}
+	#mainPrefPane {
+		overflow: scroll !important;
+		padding: 28px !important;
+		margin-inline-start: 0px !important;
+		margin-bottom: 0px !important;
+		max-width: unset !important;
+		height: calc(100% - 76px) !important;
+	}
+	#mainPrefPane > * {
+		max-width: calc(var(--page-main-content-width) + 2px) !important;
+	}
+	.main-content {
+		height: 100vh !important;
+		padding: 0px !important;
+		overflow: initial !important;
 	}
 	.help-button > .text-link {
 		border-radius: 0px !important;
