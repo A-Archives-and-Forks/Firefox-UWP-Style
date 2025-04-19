@@ -92,8 +92,11 @@
 		padding-bottom: 0px !important;
 		padding-top: 0px !important;
 	}
-	.menuitem-iconic > .menu-iconic-left {
+	.menu-iconic-left {
 		padding-top: 0px !important;
+	}
+	menuitem:not([checked="true"]) .menu-iconic-left {
+		margin-inline-end: 0px !important;
 	}
 	button:is([role="menuitem"], [role="menuitemcheckbox"]) {
 		background-position-x: 10px !important;
@@ -240,7 +243,7 @@
 		padding: 0px !important;
 	}
 	#context-navigation > menuitem {
-		padding-left: 0px !important;
+		padding: 5px 8px !important;
 	}
 	#context-navigation > .menuitem-iconic:first-child, #context-navigation > .menuitem-iconic:last-child  {
 		-moz-box-pack: center !important;
@@ -281,4 +284,5 @@
 		margin-left: -20px !important;
 		margin-top: -30px !important;
 	}
+
 }

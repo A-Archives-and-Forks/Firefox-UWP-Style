@@ -665,6 +665,9 @@ panel .text-link {
    margin: 0px !important;
    padding: 0px !important;
 }
+#urlbar-container, #search-container {
+	padding-block: 0px !important;
+}
 #searchbar {
    box-shadow: none !important;
 }
@@ -1161,17 +1164,19 @@ sidebar-tab-row {
 	background: transparent !important;
 }
 
-@media -moz-pref("sidebar.revamp") {
-	#tabbrowser-tabbox {
-		border-top-left-radius: var(--uwp-tags-overlay-radius) !important;
-		background-color: var(--uwp-nav-content-background) !important;
-		background-clip: padding-box !important;
-		border: var(--uwp-nav-content-border) !important;
-		border-right-width: 0px !important;
-		border-bottom-width: 0px !important;
-		overflow: hidden;
-	}
+
+#tabbrowser-tabbox[sidebar-shown] {
+	border-top-left-radius: var(--uwp-tags-overlay-radius) !important;
+	background-color: var(--uwp-nav-content-background) !important;
+	background-clip: padding-box !important;
+	border: var(--uwp-nav-content-border) !important;
+	border-right-width: 0px !important;
+	border-bottom-width: 0px !important;
+	overflow: hidden;
+	outline: none !important;
+	box-shadow: none !important;
 }
+
 
 #vertical-tabs {
 	margin-inline-end: 0px !important;
@@ -1253,6 +1258,7 @@ fieldset {
 	--uwp-navbar-letterbox: 20px;
 	--uwp-navbar-letterbox-bookmarks: 0px;
 	--inactive-titlebar-opacity: 1 !important;
+	--attention-dot-color: light-dark(color-mix(in srgb, AccentColor 80%, black), color-mix(in srgb, AccentColor 80%, white)) !important;
 }
 @media -moz-pref("uwp.sun-valley.round-tabs") {
 	:root #TabsToolbar {

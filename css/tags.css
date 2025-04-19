@@ -422,7 +422,7 @@
 	radio {
 		opacity: 1 !important;
 	}
-	input[type="radio"] {
+	input[type="radio"]:not(.wallpaper-input) {
 		appearance: none !important;
 		background-clip: border-box !important;
 		background-color: var(--uwp-radio-background) !important;
@@ -436,27 +436,27 @@
 		height: auto !important;
 		list-style: none !important;
 	}
-	input[type="radio"]:hover {
+	input[type="radio"]:not(.wallpaper-input):hover {
 		background-color: var(--uwp-radio-background-hover) !important;
 		border: var(--uwp-radio-border-hover) !important;
 	}
-	input[type="radio"]:hover:active {
+	input[type="radio"]:not(.wallpaper-input):hover:active {
 		background-color: var(--uwp-radio-background-active) !important;
 		border: var(--uwp-radio-border-active) !important;
 	}
-	input[type="radio"]:checked {
+	input[type="radio"]:not(.wallpaper-input):checked {
 		background-color: color-mix(in srgb, AccentColor 60%, #808080) !important;
 		border-color: color-mix(in srgb, AccentColor 60%, #808080) !important;
 	}
-	input[type="radio"]:checked:hover {
+	input[type="radio"]:not(.wallpaper-input):checked:hover {
 		background-color: color-mix(in srgb, AccentColor 50%, #808080) !important;
 		border-color: color-mix(in srgb, AccentColor 50%, #808080) !important;
 	}
-	input[type="radio"]:checked:hover:active {
+	input[type="radio"]:not(.wallpaper-input):checked:hover:active {
 		background-color: color-mix(in srgb, AccentColor 40%, #808080) !important;
 		border-color: color-mix(in srgb, AccentColor 40%, #808080) !important;
 	}
-	input[type="radio"]::before {
+	input[type="radio"]:not(.wallpaper-input)::before {
 		display: block !important;
 		content: "" !important;
 		background: transparent !important;
@@ -466,21 +466,21 @@
 		border-radius: 100% !important;
 		transition: var(--uwp-radio-transition) !important;
 	}
-	input[type="radio"]:hover::before {
+	input[type="radio"]:not(.wallpaper-input):hover::before {
 		height: var(--uwp-radio-dot-size-hover) !important;
 		width: var(--uwp-radio-dot-size-hover) !important;
 		margin: var(--uwp-radio-border-padding-hover) !important;
 	}
-	input[type="radio"]:hover:active::before {
+	input[type="radio"]:not(.wallpaper-input):hover:active::before {
 		background: AccentColorText !important;
 	}
-	input[type="radio"]:checked::before {
+	input[type="radio"]:not(.wallpaper-input):checked::before {
 		background: AccentColorText !important;
 	}
-	input[type="radio"]:checked:hover::before {
+	input[type="radio"]:not(.wallpaper-input):checked:hover::before {
 		background: AccentColorText !important;
 	}
-	input[type="radio"]:checked:hover:active::before {
+	input[type="radio"]:not(.wallpaper-input):checked:hover:active::before {
 		background: AccentColorText !important;
 	}
 	input[type="radio"] + span {

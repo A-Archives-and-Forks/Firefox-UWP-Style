@@ -381,7 +381,7 @@
 		opacity: 1 !important;
 	}
 	.icon-settings {
-		padding: 12px !important;
+		padding: 16px !important;
 	}
 	.external-link {
 		padding-left: 24px !important;
@@ -389,7 +389,38 @@
 		text-decoration: none !important;
 	}
 	.customize-menu {
+		color: var(--uwp-foreground) !important;
 		background: var(--uwp-background) !important;
+		border-radius: var(--uwp-tags-overlay-radius) 0px 0px var(--uwp-tags-overlay-radius) !important;
+		border: 1px solid var(--uwp-dialog-border) !important;
+		border-right-width: 0px !important;
+	}
+	.customize-menu .close-button-wrapper {
+		background: transparent !important;
+	}
+	.category-header {
+		align-items: center !important;
+		margin-bottom: 10px !important;
+	}
+	.wallpapers-reset {
+		text-decoration: none !important;
+	}
+	.wallpaper-list.category {
+		background: var(--uwp-background) !important;
+		color: var(--uwp-foreground) !important;
+		width: 432px !important;
+		inset-inline-start: 0px !important;
+		padding: 0 16px !important;
+		background-clip: padding-box !important;
+	}
+	.arrow-button, .external-link {
+		padding-inline-start: 32px !important;
+		background-position-x: 8px !important;
+	}
+	.wallpaper-input {
+		outline: none !important;
+		box-shadow: none !important;
+		border-radius: var(--uwp-tags-control-radius) !important;
 	}
 	.customize-menu.customize-animate-enter-done, .customize-menu.customize-animate-enter-active, .customize-menu.customize-animate-enter, .customize-menu.customize-animate-exit {
 		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .32) !important;
@@ -480,6 +511,7 @@
 			border: 1px solid AccentColor !important;
 		}
 	}
+	/*
 	@media -moz-pref("uwp.sun-valley") {
 		@supports(backdrop-filter: blur(1px)) {
 			.customize-menu.customize-animate-enter-done, .customize-menu.customize-animate-enter-active, .customize-menu.customize-animate-enter, .customize-menu.customize-animate-exit {
@@ -488,7 +520,7 @@
 				backdrop-filter: var(--uwp-acrylic-backdrop) !important;
 			}
 		}
-	}
+	}*/
 }
 
 @-moz-document url("about:newtab"), url("about:home"), url("about:privatebrowsing") {

@@ -52,6 +52,7 @@
 		border: 1px solid var(--uwp-dialog-border) !important;
 		animation: fadeInScale .3s;
 		border-radius: var(--uwp-tags-overlay-radius) !important;
+		outline: none !important;
 	}
 	.dialog-content-box, vbox[part="content-box"].box-inherit {
 		padding: 24px !important;
