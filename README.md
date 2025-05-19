@@ -43,7 +43,7 @@ Acrylic and Mica only work with the *Sun Valley* style.
 
 ### Acrylic
 
-Toggle `widget.windows.mica.popups` pref to enable.
+Set `widget.windows.mica.popups` pref to `2` to enable. Some Firefox versions might come with it already enabled.
 
 ### Mica
 
@@ -57,9 +57,7 @@ Toggle `browser.tabs.allow_transparent_browser` pref to enable transparency supp
 
 ### Custom CSS
 
-If you want to change any rules use `customChrome.css` and `customContent.css`.
-
-All the theme vars `--uwp-*` can be overridden, Firefox vars too but only if they are not set using `!important`.
+If you want to change any rules or use additional css please use `customChrome.css` and `customContent.css`.
 
 ### Accent Color
 
