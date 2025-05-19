@@ -823,12 +823,10 @@ panel .text-link {
 	.urlbarView-row[selected] .urlbarView-no-wrap, .urlbarView-results[wrap] .urlbarView-row[selected] .urlbarView-url {
 		margin-left: 10px !important;
 	}
-	.urlbarView-url {
-		color: AccentColor !important;
-	}
 }
 .urlbarView-url {
 	line-height: initial !important;
+	color: AccentColor !important;
 }
 .urlbarView-body-inner {
 	border: none !important;

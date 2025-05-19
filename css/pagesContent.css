@@ -123,7 +123,9 @@
 	:root > * {
 		font-size: 14px !important;
 	}
-
+	:root {
+		--color-accent-primary: AccentColor !important;
+	}
 	html.private {
 		--in-content-page-background: #25003e !important;
 	}
@@ -895,6 +897,10 @@
 @-moz-document url("chrome://mozapps/content/extensions/aboutaddons.html"), url-prefix("about:addons") {
 	.rating-star {
 		fill: AccentColor !important;
+	}
+	.card {
+		box-shadow: none !important;
+		border: none !important;
 	}
 	.card.addon {
 		background: transparent !important;
