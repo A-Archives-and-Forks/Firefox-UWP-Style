@@ -4,18 +4,23 @@
 		width: 46px !important;
 		height: 32px !important;
 		stroke: var(--uwp-titlebar-stroke) !important;
+		color: var(--uwp-titlebar-stroke) !important;
 		background-color: var(--uwp-titlebar-background) !important;
+		font: 10px / 1 "Segoe Fluent Icons", "Segoe MDL2 Assets" !important;
 
 		&:hover {
 			stroke: var(--uwp-titlebar-stroke-hover) !important;
+			color: var(--uwp-titlebar-stroke-hover) !important;
 			background-color: var(--uwp-titlebar-background-hover) !important;
 		}
 		&:active {
 			stroke: var(--uwp-titlebar-stroke-active) !important;
+			color: var(--uwp-titlebar-stroke-active) !important;
 			background-color: var(--uwp-titlebar-background-active) !important;
 		}
 		&:not(:hover, :active):-moz-window-inactive {
 			stroke: var(--uwp-titlebar-stroke-inactive) !important;
+			color: var(--uwp-titlebar-stroke-inactive) !important;
 		}
 		&.titlebar-close:hover {
 			background-color: #C42B1C !important;
