@@ -6,7 +6,6 @@
 		stroke: var(--uwp-titlebar-stroke) !important;
 		color: var(--uwp-titlebar-stroke) !important;
 		background-color: var(--uwp-titlebar-background) !important;
-		font: 10px / 1 "Segoe Fluent Icons", "Segoe MDL2 Assets" !important;
 
 		&:hover {
 			stroke: var(--uwp-titlebar-stroke-hover) !important;

@@ -12,7 +12,7 @@
 
 @media -moz-pref("uwp.sun-valley.font") {
 	@-moz-document regexp("chrome:\/\/(?!devtools).*"), regexp("about:(?!(blank|devtools)).*") {
-		* {
+		*:not(.titlebar-button) {
 			font-family: "Segoe UI Variable", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 			font-variation-settings: 'opsz' 14 !important;
 		}
