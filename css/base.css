@@ -1233,6 +1233,32 @@ fieldset {
 	}
 }
 
+#pinned-drop-indicator {
+	color: AccentColor !important;
+	outline: none !important;
+	border: none !important;
+	border-radius: var(--uwp-tags-control-radius) !important;
+
+	&[visible] {
+		background-color: AccentColor !important;
+		width: initial !important;
+		margin: 4px !important;
+	}
+
+	& > * {
+		color: AccentColorText !important;
+	}
+}
+
+#vertical-pinned-tabs-splitter {
+	margin-inline: 0px !important;
+	margin: 3px 8px !important;
+	background-color: var(--uwp-context-separator) !important;
+	width: initial !important;
+	min-height: 1px !important;
+	height: 1px !important;
+}
+
 :root {
 	--toolbarbutton-border-radius: 0px !important;
 	--tab-min-height: 32px !important;
@@ -1261,6 +1287,7 @@ fieldset {
 	--uwp-navbar-letterbox-bookmarks: 0px;
 	--inactive-titlebar-opacity: 1 !important;
 	--attention-dot-color: light-dark(color-mix(in srgb, AccentColor 80%, black), color-mix(in srgb, AccentColor 80%, white)) !important;
+	--tab-pinned-container-margin-inline-expanded: 0 !important;
 }
 @media -moz-pref("uwp.sun-valley.round-tabs") {
 	:root #TabsToolbar {
