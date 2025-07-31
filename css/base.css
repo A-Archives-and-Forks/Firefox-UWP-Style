@@ -361,6 +361,16 @@ toolbarbutton.subviewbutton {
 toolbarbutton.close-icon {
 	border-radius: var(--uwp-tags-control-radius) !important;
 }
+toolbar .toolbarbutton-1 {
+	&:focus-visible {
+		& > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack {
+			outline: 2px solid var(--uwp-focus-stroke-outer) !important;
+			box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
+			outline-offset: 1px !important;
+			border-radius: var(--uwp-tags-control-radius) !important;
+		}
+	}
+}
 /* navbar stuff */
 #nav-bar {
 	box-shadow: none !important;
@@ -1025,35 +1035,50 @@ notification {
 		backdrop-filter: var(--uwp-acrylic-backdrop) !important;
 	}
 }*/
-.ctrlTab-preview > .ctrlTab-preview-inner, #ctrlTab-showAll {
+#ctrlTab-previews {
+	padding: 4px !important;
+}
+.ctrlTab-preview {
 	border: 2px solid transparent !important;
 	background: transparent !important;
+	border-radius: 16px !important;
+
+	&:focus {
+		border: 2px solid light-dark(white, black) !important;
+		outline: 4px solid light-dark(AccentColor, color-mix(in srgb, AccentColor 60%, white)) !important;
+	}
+	&:is(:hover, :active) {
+		border: 2px solid light-dark(white, black) !important;
+		outline: 4px solid light-dark(AccentColor, color-mix(in srgb, AccentColor 60%, white)) !important;
+		background: transparent !important;
+	}
 }
-.ctrlTab-preview:focus > .ctrlTab-preview-inner, #ctrlTab-showAll:focus {
-	border: 2px solid white !important;
+.ctrlTab-preview-inner {
+	border: none !important;
+	padding: 0px !important;
+	overflow: clip !important;
+	border-radius: var(--uwp-tags-overlay-radius) !important;
+	background-color: var(--uwp-smoke-fill-default) !important;
+	background-clip: padding-box !important;
+	margin: 0px !important;
+}
+.ctrlTab-label {
+	margin: 0px !important;
+	padding: 0px 8px 8px 8px !important;
 }
 .ctrlTab-preview, #ctrlTab-showAll {
 	color: var(--uwp-global-front) !important;
 	text-shadow: none !important;
 }
-.ctrlTab-preview, .ctrlTab-preview:hover:active {
-	background: transparent !important;
-	border: none !important;
-}
-.ctrlTab-preview-inner {
-	border: none !important;
-	border-radius: 0px !important;
-}
 .ctrlTab-canvas {
+	background: transparent !important;
 	box-shadow: none !important;
-	transition: transform 100ms !important;
 }
-.ctrlTab-preview:hover:active .ctrlTab-canvas {
-	transform: scale(0.95) !important;
-	transition: transform 100ms !important;
+.ctrlTab-favicon-container {
+	display: none !important;
 }
 #ctrlTab-panel {
-	--panel-background: var(--uwp-context-background-blur) !important;
+	--panel-background: transparent !important;
 }
 .container.infobar {
 	background: transparent !important;

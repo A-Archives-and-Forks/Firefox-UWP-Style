@@ -71,6 +71,9 @@
 		--uwp-system-caution: #FCE100;
 		--uwp-system-critical: #FF99A4;
 
+		--uwp-focus-stroke-outer: #000000E4;
+		--uwp-focus-stroke-inner: #FFFFFFB3;
+
 		--uwp-accent-tag: color-mix(in srgb, AccentColor 90%, #000000);
 
 		--uwp-tags-button: #CCCCCC;
