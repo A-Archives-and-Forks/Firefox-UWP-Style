@@ -770,9 +770,9 @@
 		margin-top: var(--uwp-expander-spacing) !important;
 	}
 	richlistbox:focus-visible {
-		border: none !important;
-		box-shadow: none !important;
-		outline: none !important;
+		outline: 2px solid var(--uwp-focus-stroke-outer) !important;
+		box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
+		outline-offset: 1px !important;
 	}
 	richlistbox .actionsMenu {
 		flex: 1 !important;

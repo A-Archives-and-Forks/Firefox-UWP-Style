@@ -91,7 +91,6 @@
 			outline: 2px solid var(--uwp-focus-stroke-outer) !important;
 			box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
 			outline-offset: 1px !important;
-			border-radius: var(--uwp-tags-control-radius) !important;
 		}
 	}
 	.all-tabs-item {
@@ -217,7 +216,6 @@
 			outline: 2px solid var(--uwp-focus-stroke-outer) !important;
 			box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
 			outline-offset: 1px !important;
-			border-radius: var(--uwp-tags-control-radius) !important;
 		}
 	}
 	menulist:hover, select:hover { /* Finish this */
@@ -302,7 +300,6 @@
 			outline: 2px solid var(--uwp-focus-stroke-outer) !important;
 			box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
 			outline-offset: 1px !important;
-			border-radius: var(--uwp-tags-control-radius) !important;
 		}
 	}
 	#appMenu-zoom-controls > .subviewbutton-iconic:focus-visible > .toolbarbutton-icon, #appMenu-zoomReset-button2:focus-visible > .toolbarbutton-text {
