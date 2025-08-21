@@ -276,7 +276,7 @@
 .tab-audio-button {
 	height: 26px !important;
 }
-button:has(> span[type="icon ghost"].button-background:not(.labelled)) {
+button:has(> span[part="button"].button-background:not(.labelled)) {
 	border: none !important;
 	border-width: 0px !important;
 	padding: 0px !important;
@@ -1111,13 +1111,15 @@ notification {
 	border-inline-end: none !important;
 	gap: 4px !important;
 	min-width: 0px !important;
-	margin-right: 1px !important;
 }
 .wrapper > * {
 	padding-inline-end: 0px !important;
 }
 .wrapper > .tools-and-extensions {
 	gap: 1px !important;
+}
+.buttons-wrapper {
+	min-height: 0px !important;
 }
 button:has(> span:is([type="icon ghost"], [type="icon"]).button-background.labelled) {
 	border-radius: var(--uwp-tags-overlay-radius) !important;
@@ -1127,9 +1129,30 @@ button:has(> span:is([type="icon ghost"], [type="icon"]).button-background.label
 		background-color: transparent !important;
 	}
 }
+:root[sidebar-expand-on-hover] {
+	#sidebar-main {
+		&[sidebar-launcher-expanded], &[sidebar-ongoing-animations] {
+			background-color: var(--uwp-context-background) !important;
+			border-inline: none !important;
+			border-radius: 0px var(--uwp-tags-overlay-radius) var(--uwp-tags-overlay-radius) 0px !important;
+		}
+	}
+}
+#browser {
+	--sidebar-launcher-collapsed-width: var(--tab-collapsed-width) !important;
+}
+/* This should go somewhere else */
 @-moz-document url("chrome://browser/content/sidebar/sidebar-customize.html") {
 	.sidebar-panel {
 		padding: 8px !important;
+	}
+}
+@-moz-document url("chrome://browser/content/genai/chat.html") {
+	#multi-stage-message-root, #header {
+		background: transparent !important;
+	}
+	#header {
+		border: none !important;
 	}
 }
 /* Move this into another css (?) */
@@ -1191,7 +1214,6 @@ sidebar-tab-row {
 	background: transparent !important;
 }
 
-
 #main-window:not([inDOMFullscreen]) #tabbrowser-tabbox[sidebar-shown] {
 	border-top-left-radius: var(--uwp-tags-overlay-radius) !important;
 	background-color: var(--uwp-nav-content-background) !important;
@@ -1207,14 +1229,16 @@ sidebar-tab-row {
 
 #vertical-tabs {
 	margin-inline-end: 0px !important;
+	min-width: 48px !important;
 }
 #tabbrowser-tabs[orient="vertical"] {
 	gap: 0px !important;
-	& #tabs-newtab-button {
+	& #tabs-newtab-button, & #vertical-tabs-newtab-button {
 		min-height: 36px !important;
 		margin-top: 2px !important;
-		padding-left: 16px !important;
-		padding-right: 8px !important;
+		width: 100% !important;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
 	}
 	& .tabbrowser-tab {
 		min-height: 36px !important;
@@ -1230,12 +1254,25 @@ sidebar-tab-row {
 			}
 		}
 	}
+	&::after {
+		display: none !important;
+	}
 }
+
 #vertical-tabs-newtab-button {
 	appearance: none !important;
 }
 .browser-toolbox-background {
 	background: transparent !important;
+}
+.tools-and-extensions {
+	align-items: center !important;
+	gap: 8px !important;
+    padding-inline: 0px !important;;
+    padding-block-end: 0px !important;
+	&[orientation="horizontal"] {
+		padding: 0px 8px !important;
+	}
 }
 @layer input-common {
 	.label-wrapper {
@@ -1313,6 +1350,7 @@ fieldset {
 	--inactive-titlebar-opacity: 1 !important;
 	--attention-dot-color: light-dark(color-mix(in srgb, AccentColor 80%, black), color-mix(in srgb, AccentColor 80%, white)) !important;
 	--tab-pinned-container-margin-inline-expanded: 0 !important;
+	--tab-collapsed-width: 48px !important;
 }
 @media -moz-pref("uwp.sun-valley.round-tabs") {
 	:root #TabsToolbar {

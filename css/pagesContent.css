@@ -125,6 +125,7 @@
 	}
 	:root {
 		--color-accent-primary: AccentColor !important;
+		--background-color-canvas: tranparent !important;
 	}
 	html.private {
 		--in-content-page-background: #25003e !important;
@@ -657,6 +658,9 @@
 	.sticky-container {
 		position: initial !important;
 		background-color: transparent !important;
+		width: initial !important;
+		margin-inline: 0px !important;
+		padding-inline: 0px !important;
 	}
 	#mainPrefPane {
 		overflow: scroll !important;
@@ -664,7 +668,7 @@
 		margin-inline-start: 0px !important;
 		margin-bottom: 0px !important;
 		max-width: unset !important;
-		height: calc(100% - 76px) !important;
+		height: calc(100% - 82px) !important;
 	}
 	#mainPrefPane > * {
 		max-width: calc(var(--page-main-content-width) + 2px) !important;

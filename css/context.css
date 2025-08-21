@@ -77,7 +77,7 @@
 		color: var(--uwp-global-front) !important;
 		font-style: normal !important;
 	}
-	menupopup menuitem, menupopup menu, button[role="menuitem"], button[role="menuitemcheckbox"], .autocomplete-richlistitem, select > option, .all-tabs-item {
+	menupopup menuitem, menupopup menu, button[role="menuitem"], button[role="menuitemcheckbox"], .autocomplete-richlistitem, select > option, .all-tabs-item, menupopup h1 {
 		-moz-appearance: none !important;
 		color: var(--uwp-context-item-color) !important;
 		background-color: var(--uwp-context-item-background) !important;
