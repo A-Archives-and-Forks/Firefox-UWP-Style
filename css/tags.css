@@ -383,8 +383,8 @@
 	    width: 12px !important;
 	    outline: none !important;
 		margin: 0px !important;
-		transition: transform 200ms !important;
-		transform: translateX(-7px) translateY(-6px) !important;
+		transition: transform 150ms, width 150ms, height 150ms !important;
+		transform: translateX(-6px) translateY(-6px) !important;
 	}
 	.protections-popup-tp-switch::before {
 		transform: none !important;
@@ -394,7 +394,7 @@
 	}
 	input[type="checkbox"].toggle-button:checked::before, input:checked + .slider::before, .protections-popup-tp-switch[enabled]::before, .toggle-button[aria-pressed="true"]::before {
 		background: AccentColorText !important;
-		transform: translateX(2px) translateY(-6px) !important;
+		transform: translateX(1px) translateY(-6px) !important;
 	}
 	.protections-popup-tp-switch[enabled]::before {
 		transform: translateX(23px) !important;
