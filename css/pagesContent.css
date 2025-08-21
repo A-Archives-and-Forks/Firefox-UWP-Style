@@ -497,7 +497,6 @@
 		border: 1px solid var(--uwp-dialog-border) !important;
 		animation: fadeInScale .3s;
 		border-radius: var(--uwp-tags-overlay-radius) !important;
-		font-size: 12px !important;
 	}
 	.modal section-title {
 		font-size: 12px !important;
@@ -531,6 +530,12 @@
 		.modal {
 			border: 1px solid AccentColor !important;
 		}
+	}
+	.personalize-button {
+		transition: all 0.5s !important;
+	}
+	.topsite-form .form-wrapper .enable-custom-image-input {
+		font-size: inherit !important;
 	}
 	/*
 	@media -moz-pref("uwp.sun-valley") {
@@ -759,6 +764,9 @@
 		& span {
 			line-height: 24px !important;
 		}
+	}
+	.subcategory:not([hidden]) ~ .subcategory {
+		border: none !important;
 	}
 	/* Icons */
 	/* Fixes FF62~ */

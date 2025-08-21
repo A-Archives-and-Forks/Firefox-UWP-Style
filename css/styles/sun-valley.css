@@ -283,6 +283,7 @@
 		--organizer-selected-background: transparent !important;
 		
 		--urlbarView-item-inline-padding: 10px !important;
+
 	}
 
 	@media -moz-pref("uwp.sun-valley.round-tabs") and -moz-pref("uwp.sun-valley.mica") {

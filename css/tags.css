@@ -44,6 +44,9 @@
 			box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
 			outline-offset: 1px !important;
 		}
+		&.small-button {
+			font-size: unset !important;
+		}
 	}
 	button:hover, button[open], .urlbarView-tip-button:hover, .toggle-group-label:hover,
 	.findbar-find-previous:hover, .findbar-find-next:hover {
