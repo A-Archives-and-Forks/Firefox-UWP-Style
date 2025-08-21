@@ -120,7 +120,7 @@
 		--uwp-radio-selected-padding: 1px;
 		--uwp-radio-legacy-border-size: 1px;
 
-		--uwp-radio-transition: margin 200ms, width 200ms, height 200ms;
+		--uwp-radio-transition: margin 150ms, width 150ms, height 150ms, left 150ms;
 		--uwp-radio-color: var(--uwp-text-fill-primary);
 		--uwp-radio-background: var(--uwp-control-alt-fill-secondary);
 		--uwp-radio-border: var(--uwp-control-strong-stroke-default-border);

@@ -502,7 +502,7 @@
 		margin: var(--uwp-radio-border-padding-hover) !important;
 	}
 	input[type="radio"]:not(.wallpaper-input):hover:active::before {
-		background: AccentColorText !important;
+		background: transparent !important;
 	}
 	input[type="radio"]:not(.wallpaper-input):checked::before {
 		background: AccentColorText !important;
@@ -511,6 +511,9 @@
 		background: AccentColorText !important;
 	}
 	input[type="radio"]:not(.wallpaper-input):checked:hover:active::before {
+		height: var(--uwp-radio-dot-size) !important;
+		width: var(--uwp-radio-dot-size) !important;
+		margin: var(--uwp-radio-border-padding) !important;
 		background: AccentColorText !important;
 	}
 	input[type="radio"] + span {
@@ -561,16 +564,31 @@
 		border-color: color-mix(in srgb, AccentColor 40%, #808080) !important;
 	}
 
-	radio[selected="true"]::before {
+	radio:before {
 		position: absolute !important;
-		left: calc(var(--uwp-radio-border-padding) + var(--uwp-radio-legacy-border-size)) !important;
+		left: calc(var(--uwp-radio-border-padding) + var(--uwp-radio-legacy-border-size) + var(--uwp-radio-dot-size) / 2) !important;
 		display: block !important;
 		content: "" !important;
 		background: AccentColorText !important;
-		height: var(--uwp-radio-dot-size) !important;
-		width: var(--uwp-radio-dot-size) !important;
+		height: 0 !important;
+		width: 0 !important;
 		border-radius: 100% !important;
 		transition: var(--uwp-radio-transition) !important;
+	}
+	radio[selected="true"]:before, radio:active:before {
+		height: var(--uwp-radio-dot-size) !important;
+		width: var(--uwp-radio-dot-size) !important;
+		left: calc(var(--uwp-radio-border-padding) + var(--uwp-radio-legacy-border-size)) !important;
+	}
+	radio[selected="true"]:hover:before {
+		height: var(--uwp-radio-dot-size-hover) !important;
+		width: var(--uwp-radio-dot-size-hover) !important;
+		left: calc(var(--uwp-radio-border-padding-hover) + var(--uwp-radio-legacy-border-size)) !important;
+	}
+	radio[selected="true"]:active:before {
+		height: var(--uwp-radio-dot-size) !important;
+		width: var(--uwp-radio-dot-size) !important;
+		left: calc(var(--uwp-radio-border-padding) + var(--uwp-radio-legacy-border-size)) !important;
 	}
 
 	/* Radio Button Disabled */
