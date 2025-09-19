@@ -199,6 +199,7 @@
 		background-clip: padding-box !important;
 		border-radius: var(--uwp-tags-control-radius) !important;
 		height: auto !important;
+		min-height: 32px !important;
 		box-shadow: none !important;
 		@media -moz-pref("uwp.sun-valley") {
 			@media (prefers-color-scheme: dark) {
