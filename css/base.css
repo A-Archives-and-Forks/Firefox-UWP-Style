@@ -431,6 +431,17 @@ toolbar .toolbarbutton-1 {
 	}
 }
 */
+.browserContainer {
+	outline: none !important;
+	box-shadow: none !important;
+	background: transparent !important;
+	@media -moz-pref("sidebar.revamp") {
+		& {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+	}
+}
 #tracking-protection-icon-container, #identity-box {
 	border: none !important;
 }
