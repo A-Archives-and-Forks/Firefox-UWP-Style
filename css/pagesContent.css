@@ -1049,8 +1049,25 @@
 	.card-heading-image {
 		width: calc(var(--section-width) - 2px) !important;
 	}
-	.addon-detail-row {
-		border: none !important;
+	.addon-detail-row:not(.addon-detail-help-row) {
+		color: var(--uwp-expander-color) !important;
+		background-color: var(--uwp-expander-background) !important;
+		background-clip: padding-box !important;
+		border: var(--uwp-expander-border) !important;
+		border-radius: var(--uwp-tags-control-radius) !important;
+		transition: var(--uwp-button-transition) !important;
+		cursor: default !important;
+		padding: var(--uwp-expander-hor-padding) !important;
+		margin: 0px !important;
+	}
+	.addon-detail-row.addon-detail-help-row {
+		padding: 0px !important;
+		margin: 0px 4px 3px 4px !important;
+	}
+	section[role="tabpanel"] {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 3px !important;
 	}
 	.addon-detail-description {
 		color: var(--uwp-foreground) !important;

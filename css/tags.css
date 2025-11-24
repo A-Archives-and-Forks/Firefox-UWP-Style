@@ -151,6 +151,7 @@
 		margin-inline: 0px !important;
 		display: flex !important;
 		gap: 20px !important;
+		margin-top: 10px !important;
 	}
 	.tab-button[role="tab"] {
 		background-color: transparent !important;
