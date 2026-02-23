@@ -435,10 +435,12 @@ toolbar .toolbarbutton-1 {
 	outline: none !important;
 	box-shadow: none !important;
 	background: transparent !important;
+	border-radius: 0px !important;
 	@media -moz-pref("sidebar.revamp") {
 		& {
 			outline: none !important;
 			box-shadow: none !important;
+			border-radius: 0px !important;
 		}
 	}
 }
@@ -861,7 +863,7 @@ panel .text-link {
 }
 .urlbarView-title {
 	height: 18px !important;
-	line-height: normal !important;
+	line-height: 18px !important;
 }
 .urlbarView-row[type="tip"] > .urlbarView-row-inner {
     min-height: unset !important;
@@ -1097,6 +1099,10 @@ notification {
 .tab-preview-thumbnail-container {
 	border: none !important;
 	border-radius: var(--uwp-tags-control-radius) !important;
+	& canvas {
+		border: none !important;
+		border-radius: 0px !important;
+	}
 }
 .container.infobar {
 	background: transparent !important;

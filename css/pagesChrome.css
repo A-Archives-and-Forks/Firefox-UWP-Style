@@ -428,12 +428,13 @@
 	}
 }
 
-@-moz-document url("chrome://global/content/datepicker.xhtml") {
+@-moz-document url("chrome://global/content/datepicker.xhtml"), url("chrome://global/content/datetimepicker.xhtml") {
 	body {
 		background: transparent !important;
 		--disabled-fill-color: var(--uwp-button-background-disabled) !important;
 		--selected-fill-color: AccentColor !important;
 		--border: var(--uwp-button-border) !important;
+		font-size: 14px !important;
 	}
 	.spinner {
 		scrollbar-width: thin !important;
@@ -442,14 +443,30 @@
 	.week-header > div {
 		opacity: 1 !important;
 	}
-	.month-year-view {
-		background: var(--uwp-context-background) !important;
-	}
 	.month-year-container {
 		height: auto !important;
 	}
-	.month-year {
-		width: 120px !important;
+	.month-year-nav {
+		margin-bottom: 0px !important;
+		align-items: center !important;
+	}
+	.month-year-nav * {
+		fill-opacity: 1 !important;
+	}
+	#clear-button {
+		height: auto !important;
+		font-size: inherit !important;
+		margin-top: 4px !important;
+	}
+	button.month-year {
+		height: auto !important;
+		font-size: inherit !important;
+		padding-right: 26px !important;
+		margin: 0px !important;
+	}
+	#date-picker {
+		flex: 1 !important;
+		padding: 0px !important;
 	}
 }
 

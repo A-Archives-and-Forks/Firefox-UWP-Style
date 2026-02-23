@@ -443,7 +443,7 @@
 		box-shadow: none !important;
 		border-radius: var(--uwp-tags-control-radius) !important;
 	}
-	.customize-menu.customize-animate-enter-done, .customize-menu.customize-animate-enter-active, .customize-menu.customize-animate-enter, .customize-menu.customize-animate-exit {
+	.customize-menu-animate-wrapper.customize-animate-enter-done, .customize-menu-animate-wrapper.customize-animate-enter-active, .customize-menu-animate-wrapper.customize-animate-enter, .customize-menu-animate-wrapper.customize-animate-exit {
 		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .32) !important;
 	}
 	.outer-wrapper.newtab-experience .top-site-outer .tile, .outer-wrapper.newtab-experience .ds-card-grid.ds-card-grid-border .ds-card, .outer-wrapper.newtab-experience .card-outer .card {
@@ -452,6 +452,12 @@
 	}
 	.outer-wrapper.newtab-experience .top-site-outer .tile:hover, .outer-wrapper.newtab-experience .ds-card-grid.ds-card-grid-border .ds-card:hover, .outer-wrapper.newtab-experience .card-outer .card:hover {
 		box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, .32) !important;
+	}
+	.customize-menu-animate-wrapper {
+		box-shadow: none !important;
+		padding-block: 0px !important;
+		padding-inline: 0px !important;
+		background: transparent !important;
 	}
 	.ds-hero-item .context-menu-button, .ds-list-item .context-menu-button, .ds-card .context-menu-button, .ds-signup .context-menu-button, .outer-wrapper.newtab-experience .top-site-outer .context-menu-button, .card-outer .context-menu-button {
 		fill: var(--uwp-global-front) !important;
@@ -536,6 +542,12 @@
 	}
 	.topsite-form .form-wrapper .enable-custom-image-input {
 		font-size: inherit !important;
+	}
+	#main-button {
+		padding: 0px !important;
+	}
+	.home-section .divider {
+		display: none !important;
 	}
 	/*
 	@media -moz-pref("uwp.sun-valley") {

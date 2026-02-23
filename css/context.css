@@ -60,6 +60,7 @@
 	}
 	button.panel-trigger {
 		padding-left: 33px !important;
+		font-size: inherit !important;
 	}
 	.scrollbox-clip * {
 		scrollbar-width: var(--uwp-context-scrollbar-width) !important;
@@ -260,6 +261,7 @@
 		border: none !important;
 		border-radius: 0px !important;
 		background: transparent !important;
+		overflow: initial !important;
 	}
 	menulist[open="true"] {
 		color: var(--uwp-combo-color-active) !important;

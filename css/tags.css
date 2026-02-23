@@ -214,6 +214,12 @@
 		opacity: 1 !important;
 		transition: none !important;
 		outline: none !important;
+		/*&:focus-visible {
+			outline: 2px solid var(--uwp-focus-stroke-outer) !important;
+			box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
+			outline-offset: 1px !important;
+			border-radius: var(--uwp-tags-control-radius) !important;
+		}*/
 	}
 	textarea:hover,
 	input:not(#urlbar-input):not(.searchbar-textbox):not(.fake-editable):not([type="radio"]):not([type="checkbox"]):not([type="range"]):hover,
@@ -302,20 +308,20 @@
 		background-color: var(--uwp-checkbox-background-active) !important;
 		border: var(--uwp-checkbox-border-active) !important;
 	}
-	input[type="checkbox"]:checked, checkbox[checked="true"] > .checkbox-check {
+	input[type="checkbox"]:checked, checkbox[checked] > .checkbox-check {
 		background: color-mix(in srgb, AccentColor 60%, #808080) !important;
 		border-color: color-mix(in srgb, AccentColor 60%, #808080) !important;
 	}
-	input[type="checkbox"]:checked:hover, checkbox[checked="true"]:hover > .checkbox-check {
+	input[type="checkbox"]:checked:hover, checkbox[checked]:hover > .checkbox-check {
 		background-color: color-mix(in srgb, AccentColor 50%, #808080) !important;
 		border-color: color-mix(in srgb, AccentColor 50%, #808080) !important;
 	}
-	input[type="checkbox"]:checked:active, checkbox[checked="true"]:hover:active > .checkbox-check {
+	input[type="checkbox"]:checked:active, checkbox[checked]:hover:active > .checkbox-check {
 		background-color: color-mix(in srgb, AccentColor 40%, #808080) !important;
 		border-color: color-mix(in srgb, AccentColor 40%, #808080) !important;
 		fill: color-mix(in srgb, AccentColorText 60%, #808080) !important;
 	}
-	checkbox[checked="true"] > .checkbox-check , input[type="checkbox"]:checked {
+	checkbox[checked] > .checkbox-check , input[type="checkbox"]:checked {
 		background-image: url("chrome://global/skin/icons/check.svg") !important;
 		background-repeat: no-repeat !important;
 		background-size: var(--uwp-checkbox-check-size) !important;
@@ -347,15 +353,15 @@
 	}
 
 	/* Check Box Disabled */
-	checkbox[disabled="true"] > .checkbox-label-box {
+	checkbox[disabled] > .checkbox-label-box {
 		color: var(--uwp-tags-checkbox-disabled) !important;
 	}
-	checkbox[disabled="true"] > .checkbox-check {
+	checkbox[disabled] > .checkbox-check {
 		background-color: var(--uwp-checkbox-background-disabled) !important;
 		border: var(--uwp-checkbox-border-disabled) !important;
 		fill: var(--uwp-checkbox-color-disabled) !important;
 	}
-	checkbox[disabled="true"][checked="true"] > .checkbox-check, checkbox[disabled="true"][checked="true"]:is(:hover, :hover:active) > .checkbox-check  {
+	checkbox[disabled][checked] > .checkbox-check, checkbox[disabled][checked]:is(:hover, :hover:active) > .checkbox-check  {
 		background-color: var(--uwp-checkbox-background-checked-disabled) !important;
 		border: var(--uwp-checkbox-border-checked-disabled) !important;
 		fill: var(--uwp-checkbox-color-disabled) !important;
@@ -770,6 +776,7 @@
 		background: transparent !important;
 		border-radius: 0px !important;
 		border: none !important;
+		padding: 0px !important;
 	}
 	richlistitem:not(.category), .options-container .option {
 		color: var(--uwp-expander-color) !important;
