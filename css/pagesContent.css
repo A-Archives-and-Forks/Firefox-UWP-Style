@@ -739,6 +739,9 @@
 		background-color: transparent !important;
 		overflow-y: hidden !important;
 	}
+	.navigation::after {
+		display: none !important;
+	}
 	@media not -moz-pref("uwp.sun-valley") {
 		.navigation {
 			background-color: var(--uwp-pages-sidepanel) !important;
@@ -1291,5 +1294,63 @@
 	}
 	.default-input {
 		line-height: normal !important;
+	}
+}
+
+@-moz-document url-prefix("about:opentabs") {
+	html, .sticky-header {
+		background: transparent !important;
+	}
+	.fxview-tab-row-main  {
+		color: red !important;
+		border-radius: 0px !important;
+		cursor: default !important;
+		padding-block: 0px !important;
+		padding-inline: 0px !important;
+
+		& .fxview-tab-row-title {
+			color: var(--uwp-foreground) !important;
+		}
+		& .fxview-tab-row-favicon {
+			color: var(--uwp-foreground) !important;
+		}
+	}
+	moz-card {
+		background: transparent !important;
+		border: none !important;
+		padding: 0px !important;
+		margin: 0px !important;
+	}
+	.moz-card #content {
+		padding: 0px !important;
+	}
+	virtual-list {
+		gap: 3px !important;
+	}
+	sidebar-tab-row {
+		color: var(--uwp-expander-color) !important;
+		background-color: var(--uwp-expander-background) !important;
+		background-clip: padding-box !important;
+		border: var(--uwp-expander-border) !important;
+		border-radius: var(--uwp-tags-control-radius) !important;
+		transition: var(--uwp-button-transition) !important;
+		cursor: default !important;
+		padding: var(--uwp-expander-hor-padding) !important;
+		box-sizing: content-box !important;
+		width: calc(100% - 2px - var(--uwp-expander-hor-padding) * 2) !important;
+		height: auto !important;
+
+		&:hover {
+			color: var(--uwp-expander-color-hover) !important;
+			background-color: var(--uwp-expander-background-hover) !important;
+			border: var(--uwp-expander-border-hover) !important;
+		}
+
+		&:hover:active {
+			color: var(--uwp-expander-color-active) !important;
+			background-color: var(--uwp-expander-background-active) !important;
+			border: var(--uwp-expander-border-active) !important;
+		}
+
 	}
 }

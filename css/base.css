@@ -53,6 +53,7 @@
 }
 .titlebar-spacer[type="post-tabs"] {
 	width: 50px !important;
+	order: 1;
 	@media -moz-pref("sidebar.verticalTabs") {
 		display: flex !important;
 	}
@@ -1428,6 +1429,7 @@ fieldset {
 	--uwp-navbar-letterbox-bookmarks: 0px;
 	--inactive-titlebar-opacity: 1 !important;
 	--attention-dot-color: light-dark(color-mix(in srgb, AccentColor 80%, black), color-mix(in srgb, AccentColor 80%, white)) !important;
+	--tab-attention-dot-color: light-dark(color-mix(in srgb, AccentColor 80%, black), color-mix(in srgb, AccentColor 80%, white)) !important;
 	--tab-pinned-container-margin-inline-expanded: 0 !important;
 	--tab-collapsed-width: 48px !important;
 }
