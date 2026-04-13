@@ -451,6 +451,11 @@ toolbar .toolbarbutton-1 {
 #identity-box[pageproxystate="valid"]  .identity-box-button {
 	background: transparent !important;
 }
+#trust-icon-container {
+	background-color: transparent !important;
+	border: none !important;
+	outline: none !important;
+}
 .tab-group-label-container {
 	margin: 0px 3px !important;
 	padding: 0px !important;

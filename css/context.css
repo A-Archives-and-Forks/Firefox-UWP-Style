@@ -93,13 +93,12 @@
 		color: var(--uwp-global-front) !important;
 		font-style: normal !important;
 	}
-	menupopup menuitem, menupopup menu, button[role="menuitem"], button[role="menuitemcheckbox"], .autocomplete-richlistitem, select > option, .all-tabs-item, menupopup h1 {
+	menupopup menuitem, menupopup menu, button[role="menuitem"], button[role="menuitemcheckbox"], .autocomplete-richlistitem, select > option, menupopup h1, .panel-subview-body > toolbarbutton, .panel-subview-body > :not(:is(.toolbaritem-combined-buttons)) > toolbarbutton {
 		-moz-appearance: none !important;
 		color: var(--uwp-context-item-color) !important;
 		background-color: var(--uwp-context-item-background) !important;
 		border-radius: var(--uwp-tags-control-radius) !important;
-		padding-top: var(--uwp-context-item-padding-top) !important;
-		padding-bottom: var(--uwp-context-item-padding-bottom) !important;
+		padding: var(--uwp-context-item-padding) !important;
 		border: none !important;
 		font-size: 12px !important;
 		margin: var(--uwp-context-item-margin) !important;
@@ -109,10 +108,25 @@
 			box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
 			outline-offset: 1px !important;
 		}
+		&:hover {
+			background-color: var(--uwp-context-item-background-hover) !important;
+			border: none !important;
+		}
+		&:hover:active {
+			background-color: var(--uwp-context-item-background-active) !important;
+			border: none !important;
+		}
+	}
+	#appMenu-zoom-controls {
+		padding: 0px 12px !important;
 	}
 	.all-tabs-item {
-		padding-bottom: 0px !important;
-		padding-top: 0px !important;
+		& > toolbarbutton {
+			&:hover {
+				color: inherit !important;;
+				background-color: transparent !important;
+			}
+		}
 	}
 	.menu-iconic-left {
 		padding-top: 0px !important;
@@ -130,10 +144,6 @@
 	menupopup menuitem[disabled="true"], menupopup menuitem[disabled="true"] > .menu-text {
 		color: gray !important;
 	}
-	menupopup menuitem:hover, menupopup menu:hover, button[role="menuitem"]:hover, button[role="menuitemcheckbox"]:hover, .autocomplete-richlistitem:hover, menupopup menuitem[_moz-menuactive], menupopup menu[_moz-menuactive], .all-tabs-item:hover {
-		background-color: var(--uwp-context-item-background-hover) !important;
-		border: none !important;
-	}
 	/*
 	@media (prefers-color-scheme: light) {
 		menupopup menu[open], menupopup menuitem[selected="true"], select > option:checked {
@@ -146,18 +156,11 @@
 		}
 	}
 	*/
-	menupopup menuitem:hover:active, menupopup menu:hover:active, button[role="menuitem"]:hover:active, button[role="menuitemcheckbox"]:hover:active, .autocomplete-richlistitem:hover:active, menupopup menuitem[selected], .all-tabs-item:hover:active {
-		background-color: var(--uwp-context-item-background-active) !important;
-		border: none !important;
-	}
 	menugroup {
 		padding: 0px !important;
 		background-color: transparent !important;
 	}
-	menupopup menuitem > .menu-text, menupopup menuitem > .menu-iconic-text, button[role="menuitem"] > label, button[role="menuitem"] > span {
-		color: var(--uwp-global-front) !important;
-		margin-top: 1px !important;
-		margin-bottom: 1px !important;
+	.menu-text, .menu-accel {
 		padding: 0px !important;
 	}
 	.menu-accel {
@@ -331,13 +334,6 @@
 		margin-top: -30px !important;
 	}
 
-	.subviewbutton {
-		&:focus-visible {
-			outline: 2px solid var(--uwp-focus-stroke-outer) !important;
-			box-shadow: 0px 0px 0px 1px var(--uwp-focus-stroke-inner) !important;
-			outline-offset: 1px !important;
-		}
-	}
 	#appMenu-zoom-controls > .subviewbutton-iconic:focus-visible > .toolbarbutton-icon, #appMenu-zoomReset-button2:focus-visible > .toolbarbutton-text {
 		outline: none !important;
 	}

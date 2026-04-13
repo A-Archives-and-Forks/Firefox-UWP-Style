@@ -213,16 +213,26 @@
 		padding-left: 0px !important;
 		padding-right: 0px !important;
 		margin-top: 0px !important;
+		margin: 0px !important;
+		gap: 0px !important;
+		border: none !important;
 	}
-	#categories > .category {
+	.primary-nav-group, #secondary-nav-group {
+		gap: 0px !important;
+	}
+	#categories > .category, button[role="tab"], .moz-page-nav-link {
 		color: var(--uwp-nav-item-color) !important;
 		background-color: var(--uwp-nav-item-background) !important;
 		border-radius: var(--uwp-tags-control-radius) !important;
 		margin: var(--uwp-nav-item-margin) !important;
 		transition: none !important;
+		gap: 10px !important;
+		& > .page-nav-icon {
+			margin-right: 6px !important;
+		}
 	}
 	#categories > .category:not(richlistitem) > .category-name {
-		padding-left: calc(44px - var(--uwp-nav-item-selector-width)) !important;
+		padding-left: calc(34px - var(--uwp-nav-item-selector-width)) !important;
 		font-size: 14px !important;
 	}
 	#categories .category-name {
@@ -231,7 +241,7 @@
 	#categories > .category:not(button) > .category-name {
 		padding-left: 0px !important;
 	}
-	#categories > .category:not(richlistitem) {
+	#categories > .category:not(richlistitem), button[role="tab"], .moz-page-nav-link {
 		cursor: default !important;
 		display: flex !important;
 		border: none !important;
@@ -257,22 +267,23 @@
 	#categories > .category:is(div).category-no-icon > .category-name {
 		margin-left: 8px !important;
 	}
-	#categories > .category::before {
+	#categories > .category::before, button[role="tab"]::before {
 		content: "";
 		width: 0 !important;
 		display: block !important;
 		padding: calc(var(--uwp-nav-item-selector-height) / 2) calc(var(--uwp-nav-item-selector-width) / 2) !important;
 		background: transparent !important;
-		border-radius: var(--uwp-nav-item-selector-radius);
+		border-radius: var(--uwp-nav-item-selector-radius) !important;
+		position: initial !important;
 	}
 
 	@media (prefers-color-scheme: light) {
-		#categories > .category:is([selected], .selected)::before {
+		#categories > .category:is([selected], .selected)::before, button[role="tab"][selected]::before {
 			background: color-mix(in srgb, AccentColor 60%, black) !important;
 		}
 	}
 	@media (prefers-color-scheme: dark) {
-		#categories > .category:is([selected], .selected)::before {
+		#categories > .category:is([selected], .selected)::before, button[role="tab"][selected]::before {
 			background: color-mix(in srgb, AccentColor 60%, white) !important;
 		}
 	}
@@ -283,30 +294,42 @@
 	#categories > .category[hidden=""] {
 		display: none !important;
 	}
-	#categories > .category:hover, .sidebar-footer-link:hover {
+	#categories > .category:hover, .sidebar-footer-link:hover, button[role="tab"]:hover, .moz-page-nav-link:hover {
 		color: var(--uwp-nav-item-color-hover) !important;
 		background-color: var(--uwp-nav-item-background-hover) !important;
+		border: none !important;
 	}
-	#categories > .category:hover:active, .sidebar-footer-link:hover:active {
+	#categories > .category:hover:active, .sidebar-footer-link:hover:active, button[role="tab"]:hover:active, .moz-page-nav-link:hover:active {
 		color: var(--uwp-nav-item-color-active) !important;
 		background-color: var(--uwp-nav-item-background-active) !important;
+		border: none !important;
 	}
-	#categories > .category[selected], #categories > .category.selected {
+	#categories > .category[selected], #categories > .category.selected, button[role="tab"][selected] {
 		color: var(--uwp-nav-item-color-selected) !important;
 		background-color: var(--uwp-nav-item-background-selected) !important;
+		border: none !important;
 	}
-	#categories > .category[selected]:hover, #categories > .category.selected:hover {
+	#categories > .category[selected]:hover, #categories > .category.selected:hover, button[role="tab"][selected]:hover {
 		color: var(--uwp-nav-item-color-selected-hover) !important;
 		background-color: var(--uwp-nav-item-background-selected-hover) !important;
+		border: none !important;
 	}
-	#categories > .category[selected]:hover:active, #categories > .category.selected:hover:active {
+	#categories > .category[selected]:hover:active, #categories > .category.selected:hover:active, button[role="tab"][selected]:hover:active {
 		color: var(--uwp-nav-item-color-selected-active) !important;
 		background-color: var(--uwp-nav-item-background-selected-active) !important;
+		border: none !important;
 	}
-	#categories hr {
+	#categories hr, nav hr {
+		background-color: transparent !important;
 		margin: 0px !important;
 		border: none !important;
 		height: 20px !important;
+	}
+	.moz-page-nav-link {
+		padding-left: 13px !important;
+	}
+	.page-nav-heading-wrapper {
+		display: none !important;
 	}
 	.message-bar {
 		background: transparent !important;
@@ -322,10 +345,12 @@
 		box-sizing: border-box !important;
 		display: flex !important;
 		flex-direction: column !important;
+		margin: 0px !important;
 	}
 	.pane-container {
 		height: 100% !important;
 		width: 100% !important;
+		margin-inline-start: 0px !important;
 	}
 	/* Font Fixes */
 	textbox {
@@ -688,7 +713,7 @@
 		margin-inline-start: 0px !important;
 		margin-bottom: 0px !important;
 		max-width: unset !important;
-		height: calc(100% - 82px) !important;
+		height: calc(100% - 53px) !important;
 	}
 	#mainPrefPane > * {
 		max-width: calc(var(--page-main-content-width) + 2px) !important;
@@ -697,6 +722,21 @@
 		height: 100vh !important;
 		padding: 0px !important;
 		overflow: initial !important;
+	}
+	#search-container {
+		margin-inline-start: 0px !important;
+		width: calc(100%) !important;
+		background-color: transparent !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		padding-inline: 0 !important;
+		margin-bottom: 0 !important;
+
+		padding: 16px 28px !important;
+		box-sizing: border-box;
+	}
+	#searchInput {
+		max-width: 300px !important;
 	}
 	.help-button > .text-link {
 		border-radius: 0px !important;
