@@ -383,6 +383,19 @@ toolbar .toolbarbutton-1 {
 #navigator-toolbox, #navigator-toolbox::after {
 	border-bottom: 0px !important;
 }
+#navigator-toolbox {
+	margin: 0 !important;
+	border: none !important;
+	border-radius: 0 !important;
+}
+#nav-bar-customization-target {
+  & > :is(toolbarbutton, toolbaritem):first-child, & > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem) {
+    padding-inline-start: 8px !important;
+  }
+}
+#PanelUI-menu-button {
+	padding-inline-end: 8px !important;
+}
 @media (-moz-platform: windows) {
 	#navigator-toolbox {
 		background: transparent !important;
@@ -437,6 +450,7 @@ toolbar .toolbarbutton-1 {
 	box-shadow: none !important;
 	background: transparent !important;
 	border-radius: 0px !important;
+	border: none !important;
 	@media -moz-pref("sidebar.revamp") {
 		& {
 			outline: none !important;
@@ -537,6 +551,8 @@ findbar[hidden] {
 		background-clip: padding-box !important;
 		overflow: clip !important;
 		box-shadow: none !important;
+		max-width: initial !important;
+		max-height: initial !important;
 		@media not -moz-pref("widget.windows.mica.popups") {
 			& {
 				margin: var(--uwp-popup-padding) !important;
@@ -790,6 +806,7 @@ panel .text-link {
 		background-color: transparent !important;
 		padding-left: 9px !important;
 		padding-right: 9px !important;
+		border-radius: var(--uwp-tags-control-radius) !important;
 	}
 	.urlbar-input-container:hover, #searchbar:hover {
 		background-color: var(--uwp-navbar-background-hover) !important;
@@ -1159,6 +1176,11 @@ button:has(> span:is([type="icon ghost"], [type="icon"]).button-background.label
 		background-color: transparent !important;
 	}
 }
+#sidebar-main {
+	border: none !important;
+	border-radius: 0 !important;
+	background: transparent !important;
+}
 :root[sidebar-expand-on-hover] {
 	#sidebar-main {
 		&[sidebar-launcher-expanded], &[sidebar-ongoing-animations] {
@@ -1170,6 +1192,11 @@ button:has(> span:is([type="icon ghost"], [type="icon"]).button-background.label
 }
 #browser {
 	--sidebar-launcher-collapsed-width: var(--tab-collapsed-width) !important;
+	padding: 0 !important;
+	gap: 0 !important;
+}
+body {
+	background: transparent !important;
 }
 /* This should go somewhere else */
 @-moz-document url("chrome://browser/content/sidebar/sidebar-customize.html") {
@@ -1278,6 +1305,9 @@ sidebar-tab-row {
 				padding-left: 17px !important;
 				padding-right: 9px !important;
 				--tab-close-button-padding: 5px !important;
+				& > .tab-icon-stack > .tab-throbber {
+					color: var(--uwp-accent-color) !important;
+				}
 			}
 			&:not([expanded]) {
 				& .tab-background {
@@ -1287,6 +1317,15 @@ sidebar-tab-row {
 		}
 		&::after {
 			display: none !important;
+		}
+	}
+	&[orient="horizontal"] {
+		& .tabbrowser-tab {
+			& > .tab-stack > .tab-content {
+				& > .tab-icon-stack > .tab-throbber {
+					color: var(--uwp-accent-color) !important;
+				}
+			}
 		}
 	}
 	& tab-split-view-wrapper {
@@ -1437,6 +1476,9 @@ fieldset {
 	--tab-attention-dot-color: light-dark(color-mix(in srgb, AccentColor 80%, black), color-mix(in srgb, AccentColor 80%, white)) !important;
 	--tab-pinned-container-margin-inline-expanded: 0 !important;
 	--tab-collapsed-width: 48px !important;
+
+	--toolbarbutton-background-color-hover: color-mix(in srgb, currentColor 17%, transparent) !important;
+	--toolbarbutton-background-color-active: color-mix(in srgb, currentColor 30%, transparent) !important;
 }
 @media -moz-pref("uwp.sun-valley.round-tabs") {
 	:root #TabsToolbar {
@@ -1475,7 +1517,7 @@ fieldset {
 }
 
 @media not -moz-pref("uwp.sun-valley.searchmode-switcher") {
-	#urlbar-searchmode-switcher {
+	#urlbar-searchmode-switcher, .searchmode-switcher {
 		display: none !important;
 	}
 	.urlbar-input-container, #searchbar {
@@ -1484,6 +1526,7 @@ fieldset {
 		background-color: transparent !important;
 		padding-left: 10px !important;
 		padding-right: 10px !important;
+		border-radius: var(--uwp-tags-control-radius) !important;
 	}
 }
 

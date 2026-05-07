@@ -8,6 +8,9 @@
 		color: var(--uwp-foreground) !important;
 		padding: 0px !important;
 	}
+	.system-font-size {
+		font-size: 14px !important;
+	}
 	@media -moz-pref("uwp.sun-valley.mica") {
 		window:not([type="child"]) {
 			/*appearance: -moz-win-borderless-glass !important;*/

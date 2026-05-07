@@ -216,6 +216,7 @@
 		margin: 0px !important;
 		gap: 0px !important;
 		border: none !important;
+		font-size: 14px !important;
 	}
 	.primary-nav-group, #secondary-nav-group {
 		gap: 0px !important;
@@ -896,6 +897,9 @@
 		border: none !important;
 		border-radius: 0px !important;
 	}
+	moz-box-group > *:not(:first-child) {
+		margin-top: 3px !important;
+	}
 	button.button > div.text-content.has-description {
 		gap: 0px !important;
 	}
@@ -922,6 +926,29 @@
 		& > li {
 			margin-bottom: 3px !important;
 		}
+	}
+	.picker-item {
+		padding: var(--uwp-expander-hor-padding) !important;
+		background-color: var(--uwp-expander-background) !important;
+		background-clip: padding-box !important;
+		border-radius: var(--uwp-tags-control-radius) !important;
+		border: var(--uwp-expander-border) !important;
+		margin: var(--uwp-expander-spacing) 0 0 0 !important;
+
+		&:hover {
+			color: var(--uwp-expander-color-hover) !important;
+			border: var(--uwp-expander-border-hover) !important;
+			background-color: var(--uwp-expander-background-hover) !important;
+		}
+		&:active {
+			color: var(--uwp-expander-color-active) !important;
+			border: var(--uwp-expander-border-active) !important;
+			background-color: var(--uwp-expander-background-active) !important;
+		}
+	}
+	.picker-item[aria-checked="true"]{
+		background-color: color-mix(in srgb, AccentColor 40%, var(--uwp-global-back)) !important;
+		border-color: var(--in-content-accent-color) !important;
 	}
 }
 

@@ -300,6 +300,14 @@
 	#context-navigation > .menuitem-iconic[_moz-menuactive="true"]:not([disabled="true"]) > .menu-iconic-left > .menu-iconic-icon {
 		background: transparent !important;
 	}
+	.og-card {
+		background-color: transparent !important;
+
+		& .og-card-content {
+			background-color: transparent !important;
+			border-bottom-color: var(--uwp-divider-stroke-default) !important;
+		}
+	}
 	tooltip { /* Also update the js script */
 		-moz-window-shadow: cliprounded !important;
 		appearance: menupopup !important;
