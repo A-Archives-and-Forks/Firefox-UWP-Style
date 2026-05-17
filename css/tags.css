@@ -10,6 +10,7 @@
 	::selection {
 		color: AccentColorText !important;
 		background-color: AccentColor !important;
+		border-radius: 0 !important;
 	}
 
 	/* Button */
