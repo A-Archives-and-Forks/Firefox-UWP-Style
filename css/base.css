@@ -365,6 +365,9 @@ toolbarbutton.subviewbutton {
 	-moz-appearance: none !important;
 	padding: 0px !important;
 }
+.browser-toolbar {
+	background-color: transparent !important;
+}
 toolbarbutton.close-icon {
 	border-radius: var(--uwp-tags-control-radius) !important;
 }
@@ -1230,6 +1233,7 @@ button:has(> span:is([type="icon ghost"], [type="icon"]).button-background.label
 	--sidebar-launcher-collapsed-width: var(--tab-collapsed-width) !important;
 	padding: 0 !important;
 	gap: 0 !important;
+	background-color: transparent !important;
 }
 body {
 	background: transparent !important;

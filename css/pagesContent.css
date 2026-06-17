@@ -126,6 +126,11 @@
 	:root {
 		--color-accent-primary: AccentColor !important;
 		--background-color-canvas: tranparent !important;
+		@media not -moz-pref("browser.tabs.allow_transparent_browser") {
+			& {
+				--background-color-canvas: var(--uwp-browser) !important;
+			}
+		}
 	}
 	html.private {
 		--in-content-page-background: #25003e !important;
@@ -898,7 +903,7 @@
 		border-radius: 0px !important;
 	}
 	moz-box-group > *:not(:first-child) {
-		margin-top: 3px !important;
+		margin-top: var(--uwp-expander-spacing) !important;
 	}
 	button.button > div.text-content.has-description {
 		gap: 0px !important;

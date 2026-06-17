@@ -190,7 +190,7 @@
 		}
 	}
 	button .button-background {
-		background: none !important;
+		background-color: transparent !important;
 		border: none !important;
 		border-radius: 0px !important;
 		padding: 0px !important;
@@ -889,12 +889,17 @@
 	}
 	/* Random new stuff */
 	moz-card {
-		border: var(--uwp-expander-border) !important;
+		/*border: var(--uwp-expander-border) !important;
 		border-radius: var(--uwp-tags-control-radius) !important;
 		background: var(--uwp-expander-background) padding-box !important;
 		box-shadow: none !important;
 		box-sizing: border-box;
-		margin-block-start: var(--uwp-expander-spacing) !important;
+		margin-block-start: var(--uwp-expander-spacing) !important;*/
+		background: transparent !important;
+		border: none !important;
+		outline: none !important;
+		box-shadow: none !important;
+		border-radius: 0 !important;
 	}
 	.moz-card {
 		padding-block: 0px !important;
