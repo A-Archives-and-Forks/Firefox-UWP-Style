@@ -290,8 +290,9 @@
 	padding: 0px !important;
 }
 .tab-audio-button {
-	height: 26px !important;
-	width: 26px !important;
+	/*height: 26px !important;
+	width: 26px !important;*/
+	margin: 0 2px !important;
 }
 button:has(> span[part="button"].button-background:not(.labelled)) {
 	border: none !important;
@@ -303,7 +304,7 @@ button:has(> span[part="button"].button-background:not(.labelled)) {
 		background-color: transparent !important;
 	}
 }
-.tab-audio-button {
+/*.tab-audio-button {
 	margin-inline-end: 0px !important;
 	margin: 0px 2px !important;
 	#tabbrowser-tabs:is([orient="vertical"][expanded], [orient="horizontal"]) &:not([pinned]):not([crashed]) {
@@ -322,7 +323,7 @@ button:has(> span[part="button"].button-background:not(.labelled)) {
 			background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-circle-12.svg") !important;
 		}
 	}
-}
+}*/
 .tab-icon-stack .tab-icon-image {
 	opacity: 1 !important;
 }

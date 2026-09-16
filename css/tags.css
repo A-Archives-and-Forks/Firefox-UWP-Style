@@ -201,7 +201,7 @@
 		color: inherit !important;
 		outline: none !important;
 
-		&:not([type="icon ghost"]) {
+		&:not([type="icon ghost"], [type="icon toolbar"]) {
 			width: initial !important;
 			height: initial !important;
 		}
